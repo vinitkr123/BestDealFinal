@@ -83,24 +83,41 @@ public class PhoneList extends HttpServlet {
             if (i % 3 == 1) pw.print("<tr>");
             pw.print("<td><div id='shop_item'>");
             pw.print("<h3>" + phone.getName() + "</h3>");
-            pw.print("<strong>" + "$" + phone.getPrice() + "</strong><ul>");
+            pw.print("<strong>$ Orignal Price:  "+phone.getPrice()+"</strong><ul>");
+			double orignalprice = (double) phone.getPrice();
+			double discountedprice = (double)phone.getDiscount();
+			System.out.println(orignalprice-discountedprice);
+			discountedprice =orignalprice-discountedprice;
+			pw.print("<strong style='color:red'>$ Discounted Price:  "+(float)discountedprice+"</strong><ul>");
             pw.print("<li id='item'><img src='images/phone/" + phone.getImage() + "' alt='' /></li>");
             pw.print("<li><form method='post' action='Cart'>" +
                     "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='phone'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
+                    "<input type='submit' class='btn btn-success' value='Buy Now'></form></li>");
             pw.print("<li><form method='post' action='WriteReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='phone'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
+                    "<input type='submit' value='WriteReview' class='btn btn-primary'></form></li>");
             pw.print("<li><form method='post' action='ViewReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='phone'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' value='ViewReview' class='btnreview'></form></li>");
+                    "<input type='submit' value='ViewReview' class='btn btn-primary'></form></li>");
+        
+            if(phone.getWarranty().equals("No")) {
+				pw.print("<h6 style='color:red'>Retailer\'s Warranty: "+phone.getWarranty()+"</h6><ul>");
+			}
+				else {
+					pw.print("<h6 style='color:green'>Retailer\'s Warranty: "+phone.getWarranty()+"</h6><ul>");
+					}
+			if(phone.getMrebate().equals("No")) {
+				pw.print("<h6 style='color:red'>Manufacturer Rebate: "+phone.getMrebate()+"</h6><ul>");}
+				else {
+					pw.print("<h6 style='color:green'>Manufacturer Rebate: "+phone.getMrebate()+"</h6><ul>");
+					}
             pw.print("</ul></div></td>");
             if (i % 3 == 0 || i == size) pw.print("</tr>");
             i++;

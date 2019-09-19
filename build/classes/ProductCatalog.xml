@@ -4,36 +4,89 @@
 
     <FitnessWatchCatalog>
 
-        <fitnessWatch id="Fitness_Tracker_HR">
-            <name>Fitness Tracker HR</name>
-            <price>29.99</price>
-            <image>Fitness_Tracker_HR.png</image>
-            <manufacturer>LETSCOM</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-            <accessories>
-                <accessory>xboxone_wc</accessory>
+	 <fitnessWatch id="casio">
+        <name>Casio - Smart Outdoor Watch</name>
+        <price>500</price>
+        <image>casiowatch.jpg</image>
+        <manufacturer>Casio</manufacturer>
+        <condition>New</condition>
+        <discount>35.00</discount>
+		<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+			<accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
 
-            </accessories>
-        </fitnessWatch>
+        </accessories>
+    </fitnessWatch>
+   
+   <fitnessWatch id="appleseries4">
+        <name>Apple - Apple Watch Series 4 (GPS) </name>
+        <price>349.99</price>
+        <image>appleseries4.jpg</image>
+        <manufacturer>Apple</manufacturer>
+        <condition>New</condition>
+        <discount>21.00</discount>
+    <mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+            
+	<accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </fitnessWatch>
+		  <fitnessWatch id="fitbitinspire">
+        <name>Fitbit - Inspire</name>
+        <price>129.99</price>
+        <image>fitbit.jpg</image>
+        <manufacturer>Fitbit</manufacturer>
+        <condition>New</condition>
+        <discount>30.0</discount>
+        <mrebate>No</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>nintendo_wc</accessory>
+            <accessory>nintendo_sh</accessory>
+        </accessories>
+    </fitnessWatch>
+	
+	  <fitnessWatch id="garminfenix">
+        <name>Garmin - Fenix 5X Plus Sapphire Smart Watch </name>
+        <price>729.99</price>
+        <image>garminfenix.jpg</image>
+        <manufacturer>Garmin</manufacturer>
+        <condition>New</condition>
+        <discount>29.0</discount>
+<mrebate>No</mrebate>
+		<warranty>Yes</warranty>
+                
+<accessories>
+            <accessory>ps3_wc</accessory>
+			
+        </accessories>
+		</fitnessWatch>
+	
 
-        <fitnessWatch id="Letsfit_Fitness_Tracker">
-            <name>Letsfit Fitness Tracker</name>
-            <price>29.99</price>
-            <image>Letsfit_fitness_tracker.png</image>
-            <manufacturer>Letsfit</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-        </fitnessWatch>
-
-        <fitnessWatch id="Fitbit_Fitness_Watch">
+       <fitnessWatch id="Fitbit_Fitness_Watch">
             <name>Fitbit Blaze Smart Fitness Watch</name>
             <price>172.99</price>
             <image>Fitbit_Fitness_Watch.png</image>
             <manufacturer>Fitbit</manufacturer>
             <condition>New</condition>
             <discount>0</discount>
-        </fitnessWatch>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+              
+  </fitnessWatch>
 
         <fitnessWatch id="Fitbit_Charge_2">
             <name>Fitbit Charge 2</name>
@@ -42,65 +95,15 @@
             <manufacturer>Fitbit</manufacturer>
             <condition>New</condition>
             <discount>10.0</discount>
-
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+        
         </fitnessWatch>
 
-        <fitnessWatch id="Garmin_vivoactive_Smart_Watch">
-            <name>Garmin vivoactive HR GPS Smart Watch</name>
-            <price>175.99</price>
-            <image>Garmin_vivoactive_Smart_Watch.png</image>
-            <manufacturer>Garmin_vivoactive</manufacturer>
-            <condition>New</condition>
-            <discount>10.0</discount>
+        
+        
 
-        </fitnessWatch>
-
-        <fitnessWatch id="KEEPONFIT_Fitness_Tracker">
-            <name>KEEPONFIT Fitness Tracker</name>
-            <price>25.99</price>
-            <image>KEEPONFIT_Fitness_Tracker.png</image>
-            <manufacturer>KEEPONFIT</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-        </fitnessWatch>
-
-        <fitnessWatch id="wesoo_Fitness_Tracker">
-            <name>wesoo Fitness Tracker</name>
-            <price>27.99</price>
-            <image>wesoo_Fitness_Tracker.png</image>
-            <manufacturer>wesoo</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-        </fitnessWatch>
-
-        <fitnessWatch id="Akuti_Fitness_Tracker_HR">
-            <name>Akuti Fitness Tracker HR</name>
-            <price>29.99</price>
-            <image>Akuti_Fitness_Tracker_HR.png</image>
-            <manufacturer>Akuti</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-
-        </fitnessWatch>
-
-        <fitnessWatch id="Coffea_Fitness_Tracker">
-            <name>Coffea Fitness Tracker</name>
-            <price>39.99</price>
-            <image>Coffea_Fitness_Tracker.png</image>
-            <manufacturer>Coffea</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-
-        </fitnessWatch>
-
-        <fitnessWatch id="Garmin_vivoactive_Black">
-            <name>Garmin vivoactive Black</name>
-            <price>179.99</price>
-            <image>Garmin_vivoactive_Black.png</image>
-            <manufacturer>Garmin vivoactive</manufacturer>
-            <condition>New</condition>
-            <discount>10.0</discount>
-        </fitnessWatch>
+      
     </FitnessWatchCatalog>
 
     <SmartWatchCatalog>
@@ -113,14 +116,7 @@
             <discount>5.0</discount>
         </smartWatch>
 
-        <smartWatch id="Garmin_fenix_5_Plus">
-            <name>Garmin fenix 5 Plus</name>
-            <price>844.99</price>
-            <image>Garmin_fenix_5_Plus.png</image>
-            <manufacturer>Garmin fenix</manufacturer>
-            <condition>New</condition>
-            <discount>10.0</discount>
-        </smartWatch>
+        
 
         <smartWatch id="Ticwatch_E_most_comfortable_Smartwatch">
             <name>Ticwatch E most comfortable Smartwatch</name>
@@ -167,14 +163,59 @@
             <discount>0</discount>
         </smartWatch>
 
-        <smartWatch id="Garmin_vivoactive_3">
-            <name>Garmin vivoactive 3</name>
-            <price>238.99</price>
-            <image>Garmin_vivoactive_3.png</image>
-            <manufacturer>Garmin</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-        </smartWatch>
+         <smartWatch id="samsung1">
+	        <name>Samsung Galaxy (Cloud Silver)</name>
+	        <price>279.99</price>
+	        <image>samsunggalaxy.jpg</image>
+	        <manufacturer>Samsung</manufacturer>
+	        <condition>New</condition>
+	        <discount>21.00</discount>
+	        <accessories>
+	            <accessory>xbox360_wc</accessory>
+	            <accessory>xbox360_sh</accessory>
+				<accessory>xbox360_vb</accessory>
+				<accessory>xbox360_rs</accessory>
+				<accessory>xbox360_mp</accessory>
+				<accessory>xbox360_kg</accessory>
+	        </accessories>
+	    </smartWatch>
+	
+	    <smartWatch id="samsung2">
+	        <name>Samsung Galaxy (Aqua Black)</name>
+	        <price>299.99</price>
+	        <image>samsunggalaxy1.jpg</image>
+	        <manufacturer>Samsung</manufacturer>
+	        <condition>New</condition>
+	        <discount>10.0</discount>
+	        <accessories>
+	            <accessory>ps4_wc</accessory>
+				
+	        </accessories>
+	    </smartWatch>
+	    <smartWatch id="lg1">
+	        <name>LG W7 Smart Watch</name>
+	        <price>283.99</price>
+	        <image>lgw7.jpg</image>
+	        <manufacturer>LG</manufacturer>
+	        <condition>New</condition>
+	        <discount>29.0</discount>
+	        <accessories>
+	            <accessory>ps3_wc</accessory>
+				
+	        </accessories>
+	    </smartWatch>
+	    <smartWatch id="lg2">
+	        <name>LG Sports Watch</name>
+	        <price>340</price>
+	        <image>lgsports.jpg</image>
+	        <manufacturer>LG</manufacturer>
+	        <condition>New</condition>
+	        <discount>30.0</discount>
+	        <accessories>
+	            <accessory>nintendo_wc</accessory>
+	            <accessory>nintendo_sh</accessory>
+	        </accessories>
+	    </smartWatch>
 
         <smartWatch id="WJPILIS_Smart_Watch">
             <name>WJPILIS Watch</name>
@@ -206,6 +247,79 @@
             <condition>New</condition>
             <discount>5.0</discount>
         </headphone>
+
+ <headphone id="sony1">
+        <name>Sony - WH-CH700N Wireless Noise Canceling</name>
+        <price>29.99</price>
+        <image>sony1.jpg</image>
+        <manufacturer>Sony</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+            <accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
+			
+			
+        </accessories>
+    </headphone>
+    <headphone id="sony2">
+        <name>Sony - Noise-Canceling Wired</name>
+        <price>9.99</price>
+        <image>sony2.jpg</image>
+        <manufacturer>Sony</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+        <accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </headphone>
+
+    <headphone id="bose1">
+        <name>Bose® - SoundSport®</name>
+        <price>49.99</price>
+        <image>bose1.jpg</image>
+        <manufacturer>Bose</manufacturer>
+        <condition>New</condition>
+        <discount>5.0</discount>
+        <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </headphone>
+    <headphone id="bose2">
+        <name>Bose® - QuietComfort 35 Wireless</name>
+        <price>349.99</price>
+        <image>bose2.jpg</image>
+        <manufacturer>Bose</manufacturer>
+        <condition>New</condition>
+        <discount>29.0</discount>
+        <accessories>
+            <accessory>ps3_wc</accessory>
+			
+        </accessories>
+    </headphone>
+    <headphone id="beats">
+        <name>Beats by Dr. Dre - Beats Solo Wireless</name>
+        <price>229.99</price>
+        <image>beats.jpg</image>
+        <manufacturer>Beats</manufacturer>
+        <condition>New</condition>
+        <discount>30.0</discount>
+        <accessories>
+            <accessory>nintendo_wc</accessory>
+            <accessory>nintendo_sh</accessory>
+        </accessories>
+    </headphone>
 
         <headphone id="AILIHEN_I60">
             <name>AILIHEN I60</name>
@@ -289,202 +403,63 @@
         </headphone>
     </HeadPhoneCatalog>
 
-    <VirtualRealityCatalog>
-
-        <virtualReality id="VeeR_Oasis_VR">
-            <name>VeeR Oasis VR</name>
-            <price>37.99</price>
-            <image>VeeR_Oasis_VR.png</image>
-            <manufacturer>VeeR Oasis</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-
-        <virtualReality id="HTC_VIVE">
-            <name>HTC VIVE</name>
-            <price>499.99</price>
-            <image>HTC_VIVE.png</image>
-            <manufacturer>HTC</manufacturer>
-            <condition>New</condition>
-            <discount>10</discount>
-        </virtualReality>
-
-        <virtualReality id="DESTEK_V4_VR">
-            <name>DESTEK V4 VR</name>
-            <price>37.99</price>
-            <image>DESTEK_V4_VR.png</image>
-            <manufacturer>DESTEK</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-
-        <virtualReality id="Oculus_Rift_VR">
-            <name>Oculus Rift VR</name>
-            <price>37.99</price>
-            <image>Oculus_Rift_VR.png</image>
-            <manufacturer>Oculus Rift</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-
-        <virtualReality id="Oculus_VR">
-            <name>Oculus VR</name>
-            <price>37.99</price>
-            <image>Oculus_VR.png</image>
-            <manufacturer>Oculus</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-
-
-        <virtualReality id="Samsung_Gear_VR">
-            <name>Samsung Gear VR</name>
-            <price>137.99</price>
-            <image>Samsung_Gear_VR.png</image>
-            <manufacturer>Samsung</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-
-        <virtualReality id="CINERA_VR">
-            <name>CINERA VR</name>
-            <price>799.99</price>
-            <image>CINERA_VR.png</image>
-            <manufacturer>CINERA</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-
-        <virtualReality id="Lenovo_Mirage_Solo_VR">
-            <name>Lenovo Mirage Solo VR</name>
-            <price>399.99</price>
-            <image>Lenovo_Mirage_Solo_VR.png</image>
-            <manufacturer>Lenovo</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-
-        <virtualReality id="HTC_VIVE_Pro_VR">
-            <name>HTC VIVE Pro VR</name>
-            <price>1399.99</price>
-            <image>HTC_VIVE_Pro_VR.png</image>
-            <manufacturer>HTC</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-
-        <virtualReality id="HAMSWAN_Virtual_Reality">
-            <name>HAMSWAN Virtual Reality</name>
-            <price>37.99</price>
-            <image>HAMSWAN_Virtual_Reality.png</image>
-            <manufacturer>HAMSWAN</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </virtualReality>
-    </VirtualRealityCatalog>
-
-    <PetTrackerCatalog>
-        <petTracker id="Whistle_GPS_Pet_Tracker">
-            <name>Whistle 3 GPS Pet Tracker</name>
-            <price>79.99</price>
-            <image>Whistle_GPS_Pet_Tracker.png</image>
-            <manufacturer>Whistle</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-
-        <petTracker id="Link_AKC_Dog_Tracker">
-            <name>Link AKC Smart Dog Tracker</name>
-            <price>99</price>
-            <image>Link_AKC_Dog_Tracker.png</image>
-            <manufacturer>v</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-
-        <petTracker id="Tractive_Pet_Tracker">
-            <name>Tractive Pet Tracker</name>
-            <price>64.99</price>
-            <image>Tractive_Pet_Tracker.png</image>
-            <manufacturer>Tractive</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-
-        <petTracker id="Findster_Duo_Pet_Tracker">
-            <name>Findster Duo Pet Tracker</name>
-            <price>149.99</price>
-            <image>Findster_Duo_Pet_Tracker.png</image>
-            <manufacturer>Findster</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-
-        <petTracker id="Hangang_Pet_Tracker">
-            <name>Hangang Pet Tracker</name>
-            <price>48.99</price>
-            <image>Hangang_Pet_Tracker.png</image>
-            <manufacturer>Hangang</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-
-        <petTracker id="GBD_Pet_Tracker">
-            <name>GBD Pet Tracker</name>
-            <price>19.99</price>
-            <image>GBD_Pet_Tracker.png</image>
-            <manufacturer>GBD</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-        </petTracker>
-
-        <petTracker id="Tile_Pet_Tracker">
-            <name>Tile Pet Tracker</name>
-            <price>44.99</price>
-            <image>Tile_Pet_Tracker.png</image>
-            <manufacturer>Tile</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-
-        <petTracker id="MyKi_Pet_tracker">
-            <name>MyKi Pet tracker</name>
-            <price>79.99</price>
-            <image>MyKi_Pet_tracker.png</image>
-            <manufacturer>MyKi</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-
-        <petTracker id="UniAux_Tracker">
-            <name>UniAux Tracker</name>
-            <price>46.99</price>
-            <image>UniAux_Tracker.png</image>
-            <manufacturer>UniAux</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-
-        <petTracker id="MACYWELL_Pet_Tracker">
-            <name>MACYWELL Pet Tracker</name>
-            <price>18.99</price>
-            <image>MACYWELL_Pet_Tracker.png</image>
-            <manufacturer>MACYWELL</manufacturer>
-            <condition>New</condition>
-            <discount>0</discount>
-        </petTracker>
-
-        <petTracker id="TabCat_Pet_Tracker">
-            <name>TabCat Pet Tracker</name>
-            <price>99.99</price>
-            <image>TabCat_Pet_Tracker.png</image>
-            <manufacturer>TabCat</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-        </petTracker>
-    </PetTrackerCatalog>
-
     <PhoneCatalog>
+	 <phone id="applexsmax">
+        <name>Apple iPhone XsMax</name>
+        <price>1099.99</price>
+        <image>xsmax.jpg</image>
+        <manufacturer>Apple</manufacturer>
+        <condition>New</condition>
+        <discount>100.00</discount>
+        
+    </phone>
+    <phone id="applexs">
+        <name>Apple iPhone XS</name>
+        <price>999.99</price>
+        <image>applexs.jpg</image>
+        <manufacturer>Apple</manufacturer>
+        <condition>New</condition>
+        <discount>10.00</discount>
+        
+    </phone>
+
+    <phone id="motoz">
+        <name>Motorola - moto Z</name>
+        <price>399.99</price>
+        <image>motoz4.jpg</image>
+        <manufacturer>Motorola</manufacturer>
+        <condition>New</condition>
+        <discount>5.0</discount>
+        <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </phone>
+    <phone id="motog6">
+        <name>Motorola - moto G</name>
+        <price>179.99</price>
+        <image>motog6.jpg</image>
+        <manufacturer>Motorola</manufacturer>
+        <condition>New</condition>
+        <discount>10.0</discount>
+        <accessories>
+            <accessory>ps3_wc</accessory>
+			
+        </accessories>
+    </phone>
+    <phone id="nokia9">
+        <name>Nokia - 9 PureView</name>
+        <price>149.99</price>
+        <image>nokia9.jpg</image>
+        <manufacturer>Nokia</manufacturer>
+        <condition>New</condition>
+        <discount>30.0</discount>
+        <accessories>
+            <accessory>nintendo_wc</accessory>
+            <accessory>nintendo_sh</accessory>
+        </accessories>
+    </phone>
+	
         <phone id="LeapFrog_Smart_Phone">
             <name>LeapFrog Smart Phone</name>
             <price>14.99</price>
@@ -520,14 +495,7 @@
             <manufacturer>Samsung</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-            <accessories>
-                <accessory>Samsung_DeX_Station</accessory>
-                <accessory>Galaxy_Desktop_Charging_Dock</accessory>
-                <accessory>Spigen_Neo_Hybrid_Galaxy_S8_Case</accessory>
-                <accessory>JSAUX_USB_Type_C_Cable</accessory>
-                <accessory>Galaxy_S8_Screen_Protector</accessory>
-            </accessories>
-        </phone>
+           </phone>
 
         <phone id="Samsung_Galaxy_S9">
             <name>Samsung Galaxy S9+</name>
@@ -631,6 +599,8 @@
     </PhoneCatalog>
 
     <LaptopCatalog>
+	
+	
         <laptop id="HP_Chromebook">
             <name>HP Chromebook</name>
             <price>249.99</price>
@@ -643,7 +613,78 @@
 
             </accessories>
         </laptop>
+<laptop id="hppavilion">
+        <name>HP-Pavilion x360x</name>
+        <price>299.99</price>
+        <image>hppavilion.jpg</image>
+        <manufacturer>HP</manufacturer>
+        <condition>New</condition>
+        <discount>10.00</discount>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+            <accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
+			
+			
+        </accessories>
+    </laptop>
+    <laptop id="applemacbook">
+        <name>Apple MacBook Air</name>
+        <price>899.99</price>
+        <image>applemacbook.jpg</image>
+        <manufacturer>Apple</manufacturer>
+        <condition>New</condition>
+        <discount>10.00</discount>
+        <accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </laptop>
 
+    <laptop id="applemacbookpro">
+        <name>Apple MacBook Pro</name>
+        <price>2499.99</price>
+        <image>applemacbookpro.jpg</image>
+        <manufacturer>Apple</manufacturer>
+        <condition>New</condition>
+        <discount>15.0</discount>
+        <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </laptop>
+    <laptop id="microsoftsurface">
+        <name>Microsoft Surface Go</name>
+        <price>349.99</price>
+        <image>microsoftsurface.jpg</image>
+        <manufacturer>Microsoft</manufacturer>
+        <condition>New</condition>
+        <discount>10.0</discount>
+        <accessories>
+            <accessory>ps3_wc</accessory>
+			
+        </accessories>
+    </laptop>
+    <laptop id="acerlaptop">
+        <name>Acer 15.6 Chromebook</name>
+        <price>183.99</price>
+        <image>acerlaptop.jpg</image>
+        <manufacturer>Acer</manufacturer>
+        <condition>New</condition>
+        <discount>30.0</discount>
+        <accessories>
+            <accessory>nintendo_wc</accessory>
+            <accessory>nintendo_sh</accessory>
+        </accessories>
+    </laptop>
         <laptop id="ASUS_Chromebook">
             <name>ASUS Chromebook</name>
             <price>223.95</price>
@@ -658,7 +699,7 @@
         </laptop>
 
         <laptop id="Apple_MacBook_Air">
-            <name>Apple MacBook Air</name>
+            <name>Apple MacBook Air(Refurbished)</name>
             <price>479.99</price>
             <image>Apple_MacBook_Air.png</image>
             <manufacturer>Apple</manufacturer>
@@ -670,19 +711,7 @@
             </accessories>
         </laptop>
 
-        <laptop id="Apple_iMac">
-            <name>Apple iMac</name>
-            <price>1250.99</price>
-            <image>Apple_iMac.png</image>
-            <manufacturer>Apple</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-            <accessories>
-                <accessory>xboxone_wc</accessory>
-
-            </accessories>
-        </laptop>
-
+      
         <laptop id="Acer_Predator_Helios_300_Gaming_Laptop">
             <name>Acer Predator Helios 300 Gaming Laptop</name>
             <price>1049.99</price>
@@ -763,7 +792,299 @@
 
     </LaptopCatalog>
 
+	
+<TVCatalog>
+    <tv id="lgnano">
+        <name>LG NanoCell</name>
+        <price>1299.99</price>
+        <image>DG01.jpg</image>
+        <manufacturer>LG</manufacturer>
+        <condition>New</condition>
+        <discount>35.00</discount>
+		<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+            <accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
+			
+			
+        </accessories>
+    </tv>
+    <tv id="lgoled">
+        <name>LG C9 OLED</name>
+        <price>5499.99</price>
+        <image>OLED65C9PUA_1100_v1.jpg</image>
+        <manufacturer>LG</manufacturer>
+        <condition>New</condition>
+        <discount>21.00</discount>
+<mrebate>No</mrebate>
+		<warranty>Yes</warranty>
+                
+<accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </tv>
+
+    <tv id="qled8k">
+        <name>Samsung QLED8K</name>
+        <price>3499.99</price>
+        <image>01_65-75in_Q900R_Front-Logo_Black.jpg</image>
+        <manufacturer>Samsung</manufacturer>
+        <condition>New</condition>
+        <discount>5.0</discount>
+		<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+               
+ <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </tv>
+    <tv id="series8tcl">
+        <name>TCL Class Series 8</name>
+        <price>1997.00</price>
+        <image>tcl8series.jpg</image>
+        <manufacturer>TCL</manufacturer>
+        <condition>New</condition>
+        <discount>3.0</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+                
+<accessories>
+            <accessory>ps3_wc</accessory>
+			
+        </accessories>
+    </tv>
+    <tv id="series4tcl">
+        <name>TCL LED 4-Series</name>
+        <price>319.99</price>
+        <image>tcl4series.jpg</image>
+        <manufacturer>TCL</manufacturer>
+        <condition>New</condition>
+        <discount>30.0</discount>
+<mrebate>No</mrebate>
+		<warranty>Yes</warranty>
+               
+ <accessories>
+            <accessory>nintendo_wc</accessory>
+            <accessory>nintendo_sh</accessory>
+        </accessories>
+    </tv>
+</TVCatalog>
+
+	
+
+<WirelessCatalog>
+    <Wireless id="wireless1">
+        <name>Basic -Unlimted(talk,text and data)</name>
+        <price>31</price>
+        <image>wireless.jpg</image>
+        <manufacturer>Mint</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+            <accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
+			
+			
+        </accessories>
+    </Wireless>
+    <Wireless id="wireless2">
+       <name>Premium -Basic Plan Audio+Video Streaming</name>
+        <price>51</price>
+        <image>wireless.jpg</image>
+        <manufacturer>Mint</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+        <accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </Wireless>
+
+    <Wireless id="wireless3">
+      <name>Ultimate -Basic Plan+Speed+Performace</name>
+        <price>99</price>
+        <image>wireless.jpg</image>
+        <manufacturer>Mint</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+        <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </Wireless>
+    
+</WirelessCatalog>
+		
+	
+
+<SoundSystemCatalog>
+    <SoundSystem id="bosehometheater">
+        <name>Bose Wireless Home Theater</name>
+        <price>299.99</price>
+        <image>Bosewirelesshometheater.jpg</image>
+        <manufacturer>Bose</manufacturer>
+        <condition>New</condition>
+        <discount>10.00</discount>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+            <accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
+		</accessories>
+    </SoundSystem>
+    <SoundSystem id="bosesoundtouch">
+        <name>Bose Sound Touch10 Wireless</name>
+        <price>199.99</price>
+        <image>bose_soundtouch.jpg</image>
+        <manufacturer>Bose</manufacturer>
+        <condition>New</condition>
+        <discount>10.00</discount>
+        <accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </SoundSystem>
+
+    <SoundSystem id="sonysoundbar">
+        <name>Sony 2.1 Soundbar System</name>
+        <price>199.99</price>
+        <image>sonysoundbar.jpg</image>
+        <manufacturer>Sony</manufacturer>
+        <condition>New</condition>
+        <discount>5.0</discount>
+        <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </SoundSystem>
+    <SoundSystem id="sonymhcaudio">
+        <name>Sony MHC Audio System</name>
+        <price>229.99</price>
+        <image>sonymhcaudio.jpg</image>
+        <manufacturer>Sony</manufacturer>
+        <condition>New</condition>
+        <discount>10.0</discount>
+        <accessories>
+            <accessory>ps3_wc</accessory>
+			
+        </accessories>
+    </SoundSystem>
+    <SoundSystem id="yamahanatural">
+        <name>Yamaha Natural Audio Sound</name>
+        <price>149.99</price>
+        <image>yamahanaturalaudio.jpg</image>
+        <manufacturer>Yamaha</manufacturer>
+        <condition>New</condition>
+        <discount>30.0</discount>
+        <accessories>
+            <accessory>nintendo_wc</accessory>
+            <accessory>nintendo_sh</accessory>
+        </accessories>
+    </SoundSystem>
+</SoundSystemCatalog>
+
+	
     <VoiceAssistantCatalog>
+ <voiceAssistant id="googleassistant">
+        <name>Google - Home - Smart Speaker</name>
+        <price>99.99</price>
+        <image>googleassitant.jpg</image>
+        <manufacturer>Google</manufacturer>
+        <condition>New</condition>
+        <discount>35.00</discount>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+            <accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
+			
+			
+        </accessories>
+    </voiceAssistant>
+    <voiceAssistant id="amazonecho">
+        <name>Amazon Echo(2nd Gen Black)</name>
+        <price>99.99</price>
+        <image>amazonecho.jpg</image>
+        <manufacturer>Amazon</manufacturer>
+        <condition>New</condition>
+        <discount>21.00</discount>
+        <accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </voiceAssistant>
+
+    <voiceAssistant id="lenovoassistant">
+        <name>Lenovo - Smart Tab M10K</name>
+        <price>199.99</price>
+        <image>lenovoassitant.jpg</image>
+        <manufacturer>Lenovo</manufacturer>
+        <condition>New</condition>
+        <discount>10.0</discount>
+        <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </voiceAssistant>
+    <voiceAssistant id="amazonechospot">
+        <name>Amazon - Echo Spot(Black)</name>
+        <price>129.99</price>
+        <image>amazonechospot.jpg</image>
+        <manufacturer>Amazon</manufacturer>
+        <condition>New</condition>
+        <discount>29.0</discount>
+        <accessories>
+            <accessory>ps3_wc</accessory>
+			
+        </accessories>
+    </voiceAssistant>
+    <voiceAssistant id="googlenexthub">
+        <name>Google - Nest Hub Max</name>
+        <price>229.99</price>
+        <image>googlenexthub.jpg</image>
+        <manufacturer>Google</manufacturer>
+        <condition>New</condition>
+        <discount>30.0</discount>
+        <accessories>
+            <accessory>nintendo_wc</accessory>
+            <accessory>nintendo_sh</accessory>
+        </accessories>
+    </voiceAssistant>
         <voiceAssistant id="Echo_Dot">
             <name>Echo Dot</name>
             <price>49.99</price>
@@ -775,7 +1096,7 @@
         </voiceAssistant>
 
         <voiceAssistant id="Echo_Spot">
-            <name>Echo Spot</name>
+            <name>Amazon - Echo Spot(White)</name>
             <price>129.99</price>
             <image>Echo_Spot.png</image>
             <manufacturer>Amazon</manufacturer>
@@ -785,7 +1106,7 @@
         </voiceAssistant>
 
         <voiceAssistant id="Echo">
-            <name>Echo</name>
+            <name>Echo(Grey)</name>
             <price>99.99</price>
             <image>Echo.png</image>
             <manufacturer>Amazon</manufacturer>
@@ -794,15 +1115,7 @@
 
         </voiceAssistant>
 
-        <voiceAssistant id="eufy_Genie_Speaker">
-            <name>eufy Genie Speaker</name>
-            <price>34.99</price>
-            <image>eufy_Genie_Speaker.png</image>
-            <manufacturer>eufy</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-
-        </voiceAssistant>
+       
 
         <voiceAssistant id="iHome_iBT62B">
             <name>iHome iBT62B</name>
@@ -824,25 +1137,7 @@
 
         </voiceAssistant>
 
-        <voiceAssistant id="Altec_Lansing_IMW449">
-            <name>Altec Lansing IMW449</name>
-            <price>59.99</price>
-            <image>Altec_Lansing_IMW449.png</image>
-            <manufacturer>Altec</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-
-        </voiceAssistant>
-
-        <voiceAssistant id="Ultimate_Ears_MEGABOOM">
-            <name>Ultimate Ears MEGABOOM</name>
-            <price>189.96</price>
-            <image>Ultimate_Ears_MEGABOOM.png</image>
-            <manufacturer>MEGABOOM</manufacturer>
-            <condition>New</condition>
-            <discount>5</discount>
-
-        </voiceAssistant>
+      
 
         <voiceAssistant id="JBL_Flip4">
             <name>JBL Flip 4</name>

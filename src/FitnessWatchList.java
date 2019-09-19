@@ -89,24 +89,35 @@ public class FitnessWatchList extends HttpServlet{
 			double discountedprice = (double)fitnessWatch.getDiscount();
 			System.out.println(orignalprice-discountedprice);
 			discountedprice =orignalprice-discountedprice;
-			pw.print("<strong style='color:red'>$ Discounted Price: "+discountedprice+"</strong><ul>");
+			pw.print("<strong style='color:red'>$ Discounted Price: "+(float)discountedprice+"</strong><ul>");
             pw.print("<li id='item'><img src='images/fitnessWatch/" + fitnessWatch.getImage() + "' alt='' /></li>");
             pw.print("<li><form method='post' action='Cart'>" +
                     "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='fitnessWatch'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
+                    "<input type='submit' class='btn btn-success' value='Buy Now'></form></li>");
             pw.print("<li><form method='post' action='WriteReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='fitnessWatch'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
+                    "<input type='submit' value='WriteReview' class='btn btn-primary'></form></li>");
             pw.print("<li><form method='post' action='ViewReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='fitnessWatch'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' value='ViewReview' class='btnreview'></form></li>");
+                    "<input type='submit' value='ViewReview' class='btn btn-primary'></form></li>");
+            if(fitnessWatch.getWarranty().equals("No")) {
+				pw.print("<h6 style='color:red'>Retailer\'s Warranty: "+fitnessWatch.getWarranty()+"</h6><ul>");
+			}
+				else {
+					pw.print("<h6 style='color:green'>Retailer\'s Warranty: "+fitnessWatch.getWarranty()+"</h6><ul>");
+					}
+			if(fitnessWatch.getMrebate().equals("No")) {
+				pw.print("<h6 style='color:red'>Manufacturer Rebate: "+fitnessWatch.getMrebate()+"</h6><ul>");}
+				else {
+					pw.print("<h6 style='color:green'>Manufacturer Rebate: "+fitnessWatch.getMrebate()+"</h6><ul>");
+					}
             pw.print("</ul></div></td>");
             if (i % 3 == 0 || i == size) pw.print("</tr>");
             i++;

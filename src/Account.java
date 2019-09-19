@@ -45,13 +45,14 @@ public class Account extends HttpServlet {
 			pw.print("<a style='font-size: 24px;'>Account</a>");
 			pw.print("</h2><div class='entry'>");
 			User user = utility.getUser();
-			pw.print("<table class='gridtable'>");
+		//	pw.print("<table class='gridtable'>");
+			pw.print("<table class='table table-striped'>");
 			pw.print("<tr>");
-			pw.print("<td> User Name: </td>");
+			pw.print("<td class='thead-dark'> User Name: </td>");
 			pw.print("<td>" + user.getName() + "</td>");
 			pw.print("</tr>");
 			pw.print("<tr>");
-			pw.print("<td> User Type: </td>");
+			pw.print("<td class='thead-dark'> User Type: </td>");
 			pw.print("<td>" + user.getUsertype() + "</td>");
 			pw.print("</tr>");
 
@@ -74,12 +75,12 @@ public class Account extends HttpServlet {
 
 			if (size > 0) {
 
-				pw.print("<tr>");
-				pw.print("<td>OrderId:</td>");
-				pw.print("<td>UserName:</td>");
-				pw.print("<td>productOrdered:</td>");
-				pw.print("<td>DeliveryDate:</td>");
-				pw.print("<td>productPrice:</td></tr>");
+				pw.print("<tr class='dark'>");
+				pw.print("<td>Order Id</td>");
+				pw.print("<td>UserName</td>");
+				pw.print("<td>Product Ordered</td>");
+				pw.print("<td>Delivery Date</td>");
+				pw.print("<td>Product Price</td></tr>");
 				for (Map.Entry<Integer, ArrayList<OrderPayment>> entry : orderPayments.entrySet()) {
 					for (OrderPayment oi : entry.getValue())
 						if (oi.getUserName().equals(user.getName())) {
@@ -91,8 +92,8 @@ public class Account extends HttpServlet {
 									+ oi.getOrderName() + "</td><td>" + oi.getDeliverydate() + "</td><td>Price: "
 									+ oi.getOrderPrice() + "</td>");
 							pw.print("<input type='hidden' name='orderId' value='" + oi.getOrderId() + "'>");
-							pw.print("<td><input type='submit' name='Order' value='Cancel' class='btnbuy'></td>");
-							pw.print("<td><input type='submit' name='Status' value='Status' class='btnbuy'></td>");
+							pw.print("<td><input type='submit' name='Order' value='Cancel' class='btn btn-danger'></td>");
+							pw.print("<td><input type='submit' name='Status' value='Status' class='btn btn-info'></td>");
 							pw.print("<input type='hidden' name='orderId' value='" + oi.getOrderId() + "'>");
 							pw.print("<input type='hidden' name='productName' value='" + oi.getOrderName() + "'>");
 							pw.print("<input type='hidden' name='username' value='" + oi.getUserName() + "'>");
@@ -183,7 +184,7 @@ public class Account extends HttpServlet {
 									+ oi.getOrderPrice() + "</td>");
 							pw.print("<input type='hidden' name='orderId' value='" + oi.getOrderId() + "'>");
 							pw.print("<td><input type='submit' name='Order' value='Cancel' class='btnbuy'></td>");
-							pw.print("<td><input type='submit' name='Status' value='Status' class='btnbuy'></td>");
+							pw.print("<td><input type='button' name='Status' value='Status' class='btn btn-info'></td>");
 							pw.print("<input type='hidden' name='orderId' value='" + oi.getOrderId() + "'>");
 							pw.print("<input type='hidden' name='productName' value='" + oi.getOrderName() + "'>");
 							pw.print("<input type='hidden' name='username' value='" + oi.getUserName() + "'>");

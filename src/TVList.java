@@ -77,20 +77,21 @@ public class TVList extends HttpServlet {
 		utility.printHtml("LeftNavigationBar.html");
 		pw.print("<div id='content'><div class='post'><h2 class='title meta'>");
 		pw.print("<a style='font-size: 24px;'>"+name+" Consoles</a>");
-		pw.print("</h2><div class='entry'><table id='bestseller'>");
+		pw.print("</h2><div class='entry'><table id='bestseller' style='width:100%'>");
 		int i = 1; int size= hm.size();
 		for(Map.Entry<String, TV> entry : hm.entrySet())
 		{
 			TV tv = entry.getValue();
 			if(i%3==1) pw.print("<tr>");
-			pw.print("<td><div id='shop_item'>");
+			pw.print("<td><div id='shop_item' style='width:80%' >");
 			pw.print("<h3>"+tv.getName()+"</h3>");
-			pw.print("<strong>$ Orignal Price:  "+tv.getPrice()+"</strong><ul>");
+			pw.print("<strong>Orignal Price:  $"+tv.getPrice()+"</strong><ul>");
 			double orignalprice = (double) tv.getPrice();
 			double discountedprice = (double)tv.getDiscount();
 			System.out.println(orignalprice-discountedprice);
 			discountedprice =orignalprice-discountedprice;
-			pw.print("<strong style='color:red'>$ Discounted Price: "+discountedprice+"</strong><ul>");
+			pw.print("<strong style='color:red'>Discounted Price: $"+discountedprice+"</strong><ul>");
+			
 			pw.print("<li id='item'><img src='images/tv/"+tv.getImage()+"' alt='' /></li>");
 			
 			pw.print("<li><form method='post' action='Cart'>" +
@@ -98,17 +99,29 @@ public class TVList extends HttpServlet {
 					"<input type='hidden' name='type' value='tv'>"+
 					"<input type='hidden' name='maker' value='"+CategoryName+"'>"+
 					"<input type='hidden' name='access' value=''>"+
-					"<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
+					"<input type='submit' class='btn btn-success' value='Buy Now'></form></li>");
 			pw.print("<li><form method='post' action='WriteReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 					"<input type='hidden' name='type' value='tv'>"+
 					"<input type='hidden' name='maker' value='"+CategoryName+"'>"+
 					"<input type='hidden' name='access' value=''>"+
-				    "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
+				    "<input type='submit' value='WriteReview' class='btn btn-primary'></form></li>");
 			pw.print("<li><form method='post' action='ViewReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 					"<input type='hidden' name='type' value='tv'>"+
 					"<input type='hidden' name='maker' value='"+CategoryName+"'>"+
 					"<input type='hidden' name='access' value=''>"+
-				    "<input type='submit' value='ViewReview' class='btnreview'></form></li>");
+				    "<input type='submit' value='ViewReview' class='btn btn-primary'></form></li>");
+			if(tv.getWarranty().equals("No")) {
+				pw.print("<h6 style='color:red'>Retailer\'s Warranty: "+tv.getWarranty()+"</h6><ul>");
+			}
+				else {
+					pw.print("<h6 style='color:green'>Retailer\'s Warranty: "+tv.getWarranty()+"</h6><ul>");
+					}
+			if(tv.getMrebate().equals("No")) {
+				pw.print("<h6 style='color:red'>Manufacturer Rebate: "+tv.getMrebate()+"</h6><ul>");}
+				else {
+					pw.print("<h6 style='color:green'>Manufacturer Rebate: "+tv.getMrebate()+"</h6><ul>");
+					}
+			
 			pw.print("</ul></div></td>");
 			if(i%3==0 || i == size) pw.print("</tr>");
 			i++;

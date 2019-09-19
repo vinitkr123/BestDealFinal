@@ -24,18 +24,42 @@ public class TV extends HttpServlet{
 	private String retailer;
 	private String condition;
 	private double discount;
-	HashMap<String,String> accessories;
-	public TV(String name, double price, String image, String retailer,String condition,double discount){
-		this.name=name;
-		this.price=price;
-		this.image=image;
+	private String mrebate;
+	private String warranty;
+	public TV(String id, String name, double price, String image, String retailer, String condition, double discount,
+			String mrebate, String warranty, HashMap<String, String> accessories) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.image = image;
 		this.retailer = retailer;
-		this.condition=condition;
+		this.condition = condition;
 		this.discount = discount;
-        this.accessories=new HashMap<String,String>();
+		this.mrebate = mrebate;
+		this.warranty = warranty;
+		this.accessories = accessories;
 	}
+
+	HashMap<String,String> accessories;
 	
-    HashMap<String,String> getAccessories() {
+    public String getMrebate() {
+		return mrebate;
+	}
+
+	public void setMrebate(String mrebate) {
+		this.mrebate = mrebate;
+	}
+
+	public String getWarranty() {
+		return warranty;
+	}
+
+	public void setWarranty(String warranty) {
+		this.warranty = warranty;
+	}
+
+	HashMap<String,String> getAccessories() {
 		return accessories;
 		}
 
