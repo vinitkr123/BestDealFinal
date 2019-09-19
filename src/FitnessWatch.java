@@ -12,16 +12,39 @@ public class FitnessWatch {
     private String retailer;
     private String condition;
     private double discount;
+    private String mrebate;
+	private String warranty;
+    public FitnessWatch(String id, String name, double price, String image, String retailer, String condition,
+			double discount, String mrebate, String warranty) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.image = image;
+		this.retailer = retailer;
+		this.condition = condition;
+		this.discount = discount;
+		this.mrebate = mrebate;
+		this.warranty = warranty;
+	}
 
-    public FitnessWatch(String id, String name, double price, String image, String retailer, String condition, double discount) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.image = image;
-        this.condition = condition;
-        this.discount = discount;
-        this.retailer = retailer;
-    }
+	public String getMrebate() {
+		return mrebate;
+	}
+
+	public void setMrebate(String mrebate) {
+		this.mrebate = mrebate;
+	}
+
+	public String getWarranty() {
+		return warranty;
+	}
+
+	public void setWarranty(String warranty) {
+		this.warranty = warranty;
+	}
+
+	
 
     public FitnessWatch() {
 

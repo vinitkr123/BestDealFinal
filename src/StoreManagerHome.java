@@ -91,16 +91,16 @@ public class StoreManagerHome extends HttpServlet {
 		if (flag.equals("newProduct"))
 			pw.print("<h4 style='color:red'>" + error_msg + "</h4>");
 		pw.print("<form action='StoreManagerHome' method='post' enctype='multipart/form-data'>");
-		pw.print("<table style='width:100%'><tr><td>");
+		pw.print("<table style='width:90%' class='table table-striped'><tr><td>");
 
-		pw.print("<h4>Product ID</h4></td><td><input type='text' name='id' value='' class='input' required></input>");
+		pw.print("<h4>Product ID</h4></td><td><input type='text' name='id' value='' class='form-control' required></input>");
 		pw.print("</td></tr><tr><td>");
 
 		pw.print(
-				"<h4>Product Name</h4></td><td><input type='text' name='name' value='' class='input' required></input>");
+				"<h4>Product Name</h4></td><td><input type='text' name='name' value='' class='form-control' required></input>");
 		pw.print("</td></tr><tr><td>");
 
-		pw.print("<h4>Product Catalog</h4><td><select name='productCatalog' class='input'>"
+		pw.print("<h4>Product Catalog</h4><td><select name='productCatalog' class='form-control'>"
 				+ "<option value='FitnessWatch' selected>Fitness watch</option>"
 				+ "<option value='SmartWatch'>Smart watch</option>" + "<option value='Headphone'>Headphone</option>"
 				+ "<option value='VirtualReality'>Virtual reality</option>"
@@ -110,27 +110,27 @@ public class StoreManagerHome extends HttpServlet {
 				+ "<option value='Accessory'>Accessory</option></select>");
 		pw.print("</td></tr></td><tr><td>");
 
-		pw.print("<h4>Price</h4></td><td><input type='text' name='price' value='' class='input' required></input>");
+		pw.print("<h4>Price</h4></td><td><input type='text' name='price' value='' class='form-control' required></input>");
 		pw.print("</td></tr><tr><td>");
 		pw.print(
-				"<h4>Manufacturer</h4></td><td><input type='text' name='manufacturer' value='' class='input' required></input>");
+				"<h4>Manufacturer</h4></td><td><input type='text' name='manufacturer' value='' class='form-control' required></input>");
 		pw.print("</td></tr><tr><td>");
 
-		pw.print("<h4>Condition</h4><td><select name='condition' class='input'>"
+		pw.print("<h4>Condition</h4><td><select name='condition' class='form-control'>"
 				+ "<option value='New' selected>New</option>" + "<option value='Used'>Used</option>"
 				+ "<option value='Refurbished'>Refurbished</option></select>");
 		pw.print("</td></tr></td><tr><td>");
 
 		pw.print(
-				"<h4>Discount</h4></td><td><input type='text' name='discount' value='' class='input' required></input>");
+				"<h4>Discount</h4></td><td><input type='text' name='discount' value='' class='form-control' required></input>");
 		pw.print("</td></tr><tr><td>");
 
 		pw.print(
-				"<h4>Image</h4></td><td><img id=\"preview\" /><br/><input type='file' name='image' class='input' required></input>");
+				"<h4>Image</h4></td><td><img id='preview' /><br/><input type='file' name='image' class='form-control' required></input>");
 		pw.print("</td></tr><tr><td>");
 
 		pw.print(
-				"<input type='submit' class='btnbuy' value='Create' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
+				"<input type='submit' class='btn btn-success' value='Create' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
 		pw.print("</td></tr><tr><td></td><td>");
 		pw.print("</td></tr></table>");
 		pw.print("</form></div></div>");
@@ -140,7 +140,7 @@ public class StoreManagerHome extends HttpServlet {
 		pw.print("<h2 class='title meta'>");
 		pw.print("<a style='font-size: 24px;'>View Products</a></h2>");
 		pw.print("<div class='entry'>");
-		pw.print("<table class='gridtable'>");
+		pw.print("<table class='table table-striped'>");
 
 		if (flag.equals("RemoveUpdateProduct"))
 			pw.print("<h4 style='color:red'>" + error_msg + "</h4>");
@@ -179,9 +179,9 @@ public class StoreManagerHome extends HttpServlet {
 			pw.print("<tr>");
 			// pw.print("<td></td>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 			// pw.print("<br>");
@@ -207,9 +207,9 @@ public class StoreManagerHome extends HttpServlet {
 
 			pw.print("<tr>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 		}
@@ -235,9 +235,9 @@ public class StoreManagerHome extends HttpServlet {
 			pw.print("<tr>");
 			// pw.print("<td></td>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 		}
@@ -261,9 +261,9 @@ public class StoreManagerHome extends HttpServlet {
 			pw.print("</tr>");
 			pw.print("<tr>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 		}
@@ -290,9 +290,9 @@ public class StoreManagerHome extends HttpServlet {
 			pw.print("<tr>");
 			// pw.print("<td></td>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 		}
@@ -319,9 +319,9 @@ public class StoreManagerHome extends HttpServlet {
 			pw.print("<tr>");
 			// pw.print("<td></td>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 		}
@@ -348,9 +348,9 @@ public class StoreManagerHome extends HttpServlet {
 			pw.print("<tr>");
 			// pw.print("<td></td>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 		}
@@ -376,9 +376,9 @@ public class StoreManagerHome extends HttpServlet {
 			pw.print("<tr>");
 			// pw.print("<td></td>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 		}
@@ -407,9 +407,9 @@ public class StoreManagerHome extends HttpServlet {
 			pw.print("<tr>");
 			// pw.print("<td></td>");
 			pw.print(
-					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btnbuy'></div>");
+					"<td><div align=\"left\" style=\"float:left\"><input type='submit' name='Product' value='Update' class='btn btn-success'></div>");
 			pw.print(
-					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btnbuy'></div></td>");
+					"<div align=\"right\"><input type='submit' name='Product' value='Remove' class='btn btn-danger'></div></td>");
 			pw.print("</tr>");
 			pw.print("</form>");
 		}

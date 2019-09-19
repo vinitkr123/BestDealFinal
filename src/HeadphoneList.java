@@ -90,25 +90,38 @@ public class HeadphoneList extends HttpServlet{
 			double discountedprice = (double)headphone.getDiscount();
 			System.out.println(orignalprice-discountedprice);
 			discountedprice =orignalprice-discountedprice;
-			pw.print("<strong style='color:red'>$ Discounted Price: "+discountedprice+"</strong><ul>");
+			pw.print("<strong style='color:red'>$ Discounted Price: "+(float)discountedprice+"</strong><ul>");
             pw.print("<li id='item'><img src='images/headphone/" + headphone.getImage() + "' alt='' /></li>");
             pw.print("<li><form method='post' action='Cart'>" +
                     "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='headphone'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
+                    "<input type='submit' class='btn btn-success' value='Buy Now'></form></li>");
             pw.print("<li><form method='post' action='WriteReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='headphone'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
+                    "<input type='submit' value='WriteReview' class='btn btn-primary'></form></li>");
             pw.print("<li><form method='post' action='ViewReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='headphone'>" +
                     "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
                     "<input type='hidden' name='access' value=''>" +
-                    "<input type='submit' value='ViewReview' class='btnreview'></form></li>");
+                    "<input type='submit' value='ViewReview' class='btn btn-primary'></form></li>");
+
+if(headphone.getWarranty().equals("No")) {
+				pw.print("<h6 style='color:red'>Retailer\'s Warranty: "+headphone.getWarranty()+"</h6><ul>");
+			}
+				else {
+					pw.print("<h6 style='color:green'>Retailer\'s Warranty: "+headphone.getWarranty()+"</h6><ul>");
+					}
+			if(headphone.getMrebate().equals("No")) {
+				pw.print("<h6 style='color:red'>Manufacturer Rebate: "+headphone.getMrebate()+"</h6><ul>");}
+				else {
+					pw.print("<h6 style='color:green'>Manufacturer Rebate: "+headphone.getMrebate()+"</h6><ul>");
+					}
             pw.print("</ul></div></td>");
+        
             if (i % 3 == 0 || i == size) pw.print("</tr>");
             i++;
         }

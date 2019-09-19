@@ -245,6 +245,8 @@ public class SaxParserDataStore extends DefaultHandler {
 			accessoryHashMap = new HashMap<String, String>();
 			return;
 		}
+		
+		
 
 		if (element.equalsIgnoreCase("image")) {
 			// Wireless
@@ -384,6 +386,79 @@ public class SaxParserDataStore extends DefaultHandler {
 
 			if (currentElement.equals("voiceAssistant"))
 				voiceAssistant.setRetailer(elementValueRead);
+
+			if (currentElement.equals("accessory"))
+				accessory.setRetailer(elementValueRead);
+			return;
+		}
+	//Added for Manufacturer Rebate	
+		if (element.equalsIgnoreCase("mrebate")) {
+			
+			if (currentElement.equals("Wireless"))
+				wireless.setMrebate(elementValueRead);
+			
+			if (currentElement.equals("phone"))
+				phone.setMrebate(elementValueRead);
+			
+			if (currentElement.equals("laptop")) {
+				laptop.setMrebate(elementValueRead);
+			}
+			
+			
+			if (currentElement.equals("headphone"))
+				headphone.setMrebate(elementValueRead);
+			
+
+			if (currentElement.equals("smartWatch"))
+				smartWatch.setMrebate(elementValueRead);
+			
+			if (currentElement.equals("SoundSystem"))
+				sound.setMrebate(elementValueRead);
+			
+			if (currentElement.equals("voiceAssistant"))
+				voiceAssistant.setMrebate(elementValueRead);
+			
+			if (currentElement.equals("tv"))
+				tv.setMrebate(elementValueRead);
+
+			if (currentElement.equals("fitnessWatch"))
+				fitnessWatch.setMrebate(elementValueRead);
+			
+			
+			if (currentElement.equals("accessory"))
+				accessory.setRetailer(elementValueRead);
+			return;
+		}
+		//Added for Retailers Warranty 
+		if (element.equalsIgnoreCase("warranty")) {
+			
+			if (currentElement.equals("Wireless"))
+				wireless.setWarranty(elementValueRead);
+			
+			if (currentElement.equals("phone"))
+				phone.setWarranty(elementValueRead);
+			
+			if (currentElement.equals("laptop")) {
+				laptop.setWarranty(elementValueRead);
+			}
+			
+			if (currentElement.equals("headphone"))
+				headphone.setWarranty(elementValueRead);
+			
+			if (currentElement.equals("smartWatch"))
+				smartWatch.setWarranty(elementValueRead);
+			
+			if (currentElement.equals("SoundSystem"))
+				sound.setWarranty(elementValueRead);
+			
+			if (currentElement.equals("voiceAssistant"))
+				voiceAssistant.setWarranty(elementValueRead);
+			
+			if (currentElement.equals("fitnessWatch"))
+				fitnessWatch.setWarranty(elementValueRead);
+			
+			if (currentElement.equals("tv"))
+				tv.setWarranty(elementValueRead);
 
 			if (currentElement.equals("accessory"))
 				accessory.setRetailer(elementValueRead);
