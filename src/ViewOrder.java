@@ -41,8 +41,8 @@ public class ViewOrder extends HttpServlet {
 		then this page shows all the order details*/
 
         if (request.getParameter("orderId") == null) {
-            pw.print("<table align='center'><tr><td>Enter OrderNo &nbsp&nbsp<input name='orderId' type='text'></td>");
-            pw.print("<td><input type='submit' name='Order' value='ViewOrder' class='btnbuy'></td></tr></table>");
+            pw.print("<table align='center' class='table table-striped'><tr><td>Enter OrderNo &nbsp&nbsp</td><td><input name='orderId' type='text' class='form-control'></td></tr>");
+            pw.print("<tr><td colspan='2'>&nbsp&nbsp<input type='submit' name='Order' value='ViewOrder' class='btn btn-primary'></td></tr></table>");
         }
 
         //hashmap gets all the order details from file
@@ -87,7 +87,7 @@ public class ViewOrder extends HttpServlet {
                 }
                 // display the orders if there exist order with order id
                 if (size > 0) {
-                    pw.print("<table class='gridtable'>");
+                    pw.print("<table class='table table-striped'>");
                     pw.print("<tr>");
                     pw.print("<td>OrderId:</td>");
                     pw.print("<td>UserName:</td>");

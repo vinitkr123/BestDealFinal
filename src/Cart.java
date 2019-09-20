@@ -53,7 +53,7 @@ public class Cart extends HttpServlet {
         pw.print("<a style='font-size: 24px;'>Cart(" + utility.CartCount() + ")</a>");
         pw.print("</h2><div class='entry'>");
         if (utility.CartCount() > 0) {
-            pw.print("<table  class='gridtable'>");
+            pw.print("<table  class='table table-striped'>");
             int i = 1;
             double total = 0;
             
@@ -62,7 +62,7 @@ public class Cart extends HttpServlet {
                 pw.print("<form name ='CartForm' action='RemoveCart' method='post'>");
                 pw.print("<tr>");
                 pw.print("<td>" + i + "</td><td>" + oi.getName() + "</td><td>: " + originalprice + "</td>");
-                pw.print("<td><input type='submit' name='RemoveCart' value='Delete' class='btnbuy' /></td>");
+                pw.print("<td><input type='submit' name='RemoveCart' value='Delete' class='btn btn-primary' /></td>");
                 pw.print("<input type='hidden' name='orderName' value='" + oi.getName() + "'>");
                 pw.print("<input type='hidden' name='orderPrice' value='" + oi.getPrice() + "'>");
                 pw.print("</tr>");
@@ -77,7 +77,7 @@ public class Cart extends HttpServlet {
             pw.print("<input type='hidden' name='orderTotal' value='" + total + "'>");
             pw.print("<tr><th></th><th>Total: </th><th>" + total + "</th>");
             pw.print("<tr><td></td><td></td><td>");
-            pw.print("<input type='submit' name='CheckOut' value='CheckOut' class='btnbuy' /></td>");
+            pw.print("&nbsp&nbsp<input type='submit' name='CheckOut' value='CheckOut' class='btn btn-primary' /></td>");
 //            pw.print("</form>");
             /* This code is calling Carousel.java code to implement carousel feature*/
             pw.print(carousel.carouselfeature(utility));

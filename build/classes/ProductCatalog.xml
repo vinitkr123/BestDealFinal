@@ -113,7 +113,8 @@
             <image>Amazfit_Bip_Smartwatch.png</image>
             <manufacturer>Amazfit</manufacturer>
             <condition>New</condition>
-            <discount>5.0</discount>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <discount>5.0</discount>
         </smartWatch>
 
         
@@ -124,7 +125,8 @@
             <image>Ticwatch_E_most_comfortable_Smartwatch.png</image>
             <manufacturer>Ticwatch</manufacturer>
             <condition>New</condition>
-            <discount>0</discount>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <discount>0</discount>
         </smartWatch>
 
         <smartWatch id="Samsung_Gear_S3_Frontier_Smartwatch ">
@@ -133,7 +135,8 @@
             <image>Samsung_Gear_S3_Frontier_Smartwatch.png</image>
             <manufacturer>Samsung</manufacturer>
             <condition>New</condition>
-            <discount>10.0</discount>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <discount>10.0</discount>
         </smartWatch>
 
         <smartWatch id="Samsung_Gear_S2_Smartwatch">
@@ -142,7 +145,8 @@
             <image>Samsung_Gear_S2_Smartwatch.png</image>
             <manufacturer>Samsung</manufacturer>
             <condition>New</condition>
-            <discount>10.0</discount>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <discount>10.0</discount>
         </smartWatch>
 
         <smartWatch id="Fitbit_Blaze_Smart_Fitness_Watch">
@@ -151,7 +155,8 @@
             <image>Fitbit_Blaze_Smart_Fitness_Watch.png</image>
             <manufacturer>Fitbit</manufacturer>
             <condition>New</condition>
-            <discount>0</discount>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <discount>0</discount>
         </smartWatch>
 
         <smartWatch id="Aeifond_Smart">
@@ -160,7 +165,8 @@
             <image>Aeifond_Smart.png</image>
             <manufacturer>Aeifond</manufacturer>
             <condition>New</condition>
-            <discount>0</discount>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <discount>0</discount>
         </smartWatch>
 
          <smartWatch id="samsung1">
@@ -170,7 +176,8 @@
 	        <manufacturer>Samsung</manufacturer>
 	        <condition>New</condition>
 	        <discount>21.00</discount>
-	        <accessories>
+	     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
 	            <accessory>xbox360_wc</accessory>
 	            <accessory>xbox360_sh</accessory>
 				<accessory>xbox360_vb</accessory>
@@ -187,7 +194,8 @@
 	        <manufacturer>Samsung</manufacturer>
 	        <condition>New</condition>
 	        <discount>10.0</discount>
-	        <accessories>
+	    <mrebate>Yes</mrebate>
+		<warranty>No</warranty>    <accessories>
 	            <accessory>ps4_wc</accessory>
 				
 	        </accessories>
@@ -199,7 +207,8 @@
 	        <manufacturer>LG</manufacturer>
 	        <condition>New</condition>
 	        <discount>29.0</discount>
-	        <accessories>
+	   <mrebate>Yes</mrebate>
+		<warranty>No</warranty>     <accessories>
 	            <accessory>ps3_wc</accessory>
 				
 	        </accessories>
@@ -211,7 +220,8 @@
 	        <manufacturer>LG</manufacturer>
 	        <condition>New</condition>
 	        <discount>30.0</discount>
-	        <accessories>
+	   <mrebate>Yes</mrebate>
+		<warranty>No</warranty>     <accessories>
 	            <accessory>nintendo_wc</accessory>
 	            <accessory>nintendo_sh</accessory>
 	        </accessories>
@@ -223,7 +233,8 @@
             <image>WJPILIS_Smart_Watch.png</image>
             <manufacturer>WJPILIS</manufacturer>
             <condition>New</condition>
-            <discount>0</discount>
+       <mrebate>Yes</mrebate>
+		<warranty>No</warranty>     <discount>0</discount>
         </smartWatch>
 
         <smartWatch id="TicWatch_Smart_Watch">
@@ -232,7 +243,8 @@
             <image>TicWatch_Smart_Watch.png</image>
             <manufacturer>TicWatch</manufacturer>
             <condition>New</condition>
-            <discount>10.0</discount>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>      <discount>10.0</discount>
         </smartWatch>
 
 
@@ -245,7 +257,8 @@
             <image>Mighty_Rock_E7.png</image>
             <manufacturer>Mighty Rock</manufacturer>
             <condition>New</condition>
-            <discount>5.0</discount>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>      <discount>5.0</discount>
         </headphone>
 
  <headphone id="sony1">
@@ -255,7 +268,8 @@
         <manufacturer>Sony</manufacturer>
         <condition>New</condition>
         <discount>1.00</discount>
-        <accessories>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
             <accessory>tv_remote</accessory>
             <accessory>tv_wallmount</accessory>
 			<accessory>xboxone_kg</accessory>
@@ -274,7 +288,8 @@
         <manufacturer>Sony</manufacturer>
         <condition>New</condition>
         <discount>1.00</discount>
-        <accessories>
+    <mrebate>Yes</mrebate>
+		<warranty>No</warranty>    <accessories>
             <accessory>xbox360_wc</accessory>
             <accessory>xbox360_sh</accessory>
 			<accessory>xbox360_vb</accessory>
@@ -291,7 +306,8 @@
         <manufacturer>Bose</manufacturer>
         <condition>New</condition>
         <discount>5.0</discount>
-        <accessories>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
             <accessory>ps4_wc</accessory>
 			
         </accessories>
@@ -303,7 +319,8 @@
         <manufacturer>Bose</manufacturer>
         <condition>New</condition>
         <discount>29.0</discount>
-        <accessories>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
             <accessory>ps3_wc</accessory>
 			
         </accessories>
@@ -315,7 +332,8 @@
         <manufacturer>Beats</manufacturer>
         <condition>New</condition>
         <discount>30.0</discount>
-        <accessories>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
             <accessory>nintendo_wc</accessory>
             <accessory>nintendo_sh</accessory>
         </accessories>
@@ -328,7 +346,8 @@
             <manufacturer>AILIHEN</manufacturer>
             <condition>New</condition>
             <discount>1.0</discount>
-        </headphone>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   </headphone>
 
         <headphone id="Mpow_059_Bluetooth_Headphones">
             <name>Mpow 059 Bluetooth Headphones</name>
@@ -337,7 +356,8 @@
             <manufacturer>ElectronicArts</manufacturer>
             <condition>New</condition>
             <discount>5.0</discount>
-        </headphone>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>  </headphone>
 
         <headphone id="Panasonic_ErgoFit_Headphones">
             <name>Panasonic ErgoFit Headphones</name>
@@ -346,7 +366,8 @@
             <manufacturer>Panasonic</manufacturer>
             <condition>New</condition>
             <discount>0</discount>
-        </headphone>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>  </headphone>
 
         <headphone id="Bose_QuietComfort_25">
             <name>Bose QuietComfort 25</name>
@@ -355,7 +376,8 @@
             <manufacturer>Bose</manufacturer>
             <condition>New</condition>
             <discount>10.0</discount>
-        </headphone>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   </headphone>
 
         <headphone id="Otium_Wireless_Earphones">
             <name>Otium Wireless Earphones</name>
@@ -364,7 +386,8 @@
             <manufacturer>Otium</manufacturer>
             <condition>New</condition>
             <discount>0</discount>
-        </headphone>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   </headphone>
 
         <headphone id="COWIN_E7_Headphones">
             <name>COWIN E7 Headphones</name>
@@ -373,7 +396,8 @@
             <manufacturer>COWIN</manufacturer>
             <condition>New</condition>
             <discount>15.0</discount>
-        </headphone>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   </headphone>
 
         <headphone id="AILIHEN_C8_Headphones">
             <name>AILIHEN C8 Headphones</name>
@@ -382,7 +406,8 @@
             <manufacturer>AILIHEN</manufacturer>
             <condition>New</condition>
             <discount>0</discount>
-        </headphone>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>  </headphone>
 
         <headphone id="Mpow_Flame_Headphones">
             <name>Mpow Flame Headphones</name>
@@ -391,7 +416,8 @@
             <manufacturer>Mpow</manufacturer>
             <condition>New</condition>
             <discount>0</discount>
-        </headphone>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>  </headphone>
 
         <headphone id="Sony_MDR7506_Headphone">
             <name>Sony MDR7506 Headphone</name>
@@ -399,7 +425,8 @@
             <image>Sony_MDR7506_Headphone.png</image>
             <manufacturer>Sony</manufacturer>
             <condition>New</condition>
-            <discount>5.0</discount>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>      <discount>5.0</discount>
         </headphone>
     </HeadPhoneCatalog>
 
@@ -410,7 +437,8 @@
         <image>xsmax.jpg</image>
         <manufacturer>Apple</manufacturer>
         <condition>New</condition>
-        <discount>100.00</discount>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <discount>100.00</discount>
         
     </phone>
     <phone id="applexs">
@@ -419,7 +447,8 @@
         <image>applexs.jpg</image>
         <manufacturer>Apple</manufacturer>
         <condition>New</condition>
-        <discount>10.00</discount>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <discount>10.00</discount>
         
     </phone>
 
@@ -430,7 +459,8 @@
         <manufacturer>Motorola</manufacturer>
         <condition>New</condition>
         <discount>5.0</discount>
-        <accessories>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>  <accessories>
             <accessory>ps4_wc</accessory>
 			
         </accessories>
@@ -442,7 +472,8 @@
         <manufacturer>Motorola</manufacturer>
         <condition>New</condition>
         <discount>10.0</discount>
-        <accessories>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
             <accessory>ps3_wc</accessory>
 			
         </accessories>
@@ -454,7 +485,8 @@
         <manufacturer>Nokia</manufacturer>
         <condition>New</condition>
         <discount>30.0</discount>
-        <accessories>
+     <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
             <accessory>nintendo_wc</accessory>
             <accessory>nintendo_sh</accessory>
         </accessories>
@@ -467,7 +499,8 @@
             <manufacturer>LeapFrog</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-        </phone>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>  </phone>
 
         <phone id="Essential_Phone">
             <name>Essential Phone</name>
@@ -476,7 +509,8 @@
             <manufacturer>TabEssentialCat</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-        </phone>
+      <mrebate>Yes</mrebate>
+		<warranty>No</warranty>  </phone>
 
         <phone id="VTech_Phone">
             <name>VTech Phone</name>
@@ -485,7 +519,8 @@
             <manufacturer>VTech</manufacturer>
             <condition>New</condition>
             <discount>0</discount>
-
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         </phone>
 
         <phone id="Samsung_Galaxy_S8">
@@ -495,7 +530,8 @@
             <manufacturer>Samsung</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-           </phone>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>  </phone>
 
         <phone id="Samsung_Galaxy_S9">
             <name>Samsung Galaxy S9+</name>
@@ -504,7 +540,8 @@
             <manufacturer>Samsung</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-            <accessories>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
                 <accessory>Samsung_DeX_Station</accessory>
                 <accessory>Galaxy_Desktop_Charging_Dock</accessory>
                 <accessory>Spigen_Neo_Hybrid_Galaxy_S8_Case</accessory>
@@ -521,7 +558,8 @@
             <manufacturer>Panasonic</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-            <accessories>
+        <mrebate>Yes</mrebate>
+		<warranty>No</warranty>    <accessories>
                 <accessory>xboxone_wc</accessory>
 
             </accessories>
@@ -534,7 +572,8 @@
             <manufacturer>Apple</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-            <accessories>
+        <mrebate>Yes</mrebate>
+		<warranty>No</warranty>    <accessories>
                 <accessory>Lamicall_Cell_Phone_Stand</accessory>
                 <accessory>AMIR_for_iPhone_Lens</accessory>
                 <accessory>Cell_Phone_Holder_for_Car</accessory>
@@ -550,7 +589,8 @@
             <manufacturer>Apple</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>Lamicall_Cell_Phone_Stand</accessory>
                 <accessory>AMIR_for_iPhone_Lens</accessory>
@@ -567,7 +607,8 @@
             <manufacturer>Honor</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         </phone>
 
         <phone id="Huawei_Mate_SE">
@@ -576,6 +617,8 @@
             <image>Huawei_Mate_SE.png</image>
             <manufacturer>Huawei</manufacturer>
             <condition>New</condition>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <discount>5</discount>
         </phone>
 
@@ -586,7 +629,8 @@
             <manufacturer>BLU</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-        </phone>
+        <mrebate>Yes</mrebate>
+		<warranty>No</warranty></phone>
 
         <phone id="BLU_Pure_View">
             <name>BLU Pure View</name>
@@ -595,7 +639,8 @@
             <manufacturer>BLU</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-        </phone>
+       <mrebate>Yes</mrebate>
+		<warranty>No</warranty> </phone>
     </PhoneCatalog>
 
     <LaptopCatalog>
@@ -608,7 +653,8 @@
             <manufacturer>HP</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
-            <accessories>
+         <mrebate>Yes</mrebate>
+		<warranty>No</warranty>   <accessories>
                 <accessory>xboxone_wc</accessory>
 
             </accessories>
@@ -620,7 +666,8 @@
         <manufacturer>HP</manufacturer>
         <condition>New</condition>
         <discount>10.00</discount>
-        <accessories>
+        <mrebate>Yes</mrebate>
+		<warranty>No</warranty><accessories>
             <accessory>tv_remote</accessory>
             <accessory>tv_wallmount</accessory>
 			<accessory>xboxone_kg</accessory>
@@ -639,7 +686,8 @@
         <manufacturer>Apple</manufacturer>
         <condition>New</condition>
         <discount>10.00</discount>
-        <accessories>
+       <mrebate>Yes</mrebate>
+		<warranty>No</warranty> <accessories>
             <accessory>xbox360_wc</accessory>
             <accessory>xbox360_sh</accessory>
 			<accessory>xbox360_vb</accessory>
@@ -655,7 +703,8 @@
         <image>applemacbookpro.jpg</image>
         <manufacturer>Apple</manufacturer>
         <condition>New</condition>
-        <discount>15.0</discount>
+        <mrebate>Yes</mrebate>
+		<warranty>No</warranty><discount>15.0</discount>
         <accessories>
             <accessory>ps4_wc</accessory>
 			
@@ -667,7 +716,8 @@
         <image>microsoftsurface.jpg</image>
         <manufacturer>Microsoft</manufacturer>
         <condition>New</condition>
-        <discount>10.0</discount>
+        <mrebate>Yes</mrebate>
+		<warranty>No</warranty><discount>10.0</discount>
         <accessories>
             <accessory>ps3_wc</accessory>
 			
@@ -692,6 +742,8 @@
             <manufacturer>ASUS</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>xboxone_wc</accessory>
 
@@ -705,6 +757,8 @@
             <manufacturer>Apple</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>xboxone_wc</accessory>
 
@@ -719,6 +773,8 @@
             <manufacturer>Acer</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>xboxone_wc</accessory>
 
@@ -732,6 +788,8 @@
             <manufacturer>Acer</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>xboxone_wc</accessory>
 
@@ -745,6 +803,8 @@
             <manufacturer>Samsung</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>xboxone_wc</accessory>
 
@@ -758,6 +818,8 @@
             <manufacturer>ASUS</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>xboxone_wc</accessory>
 
@@ -771,6 +833,8 @@
             <manufacturer>Acer</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>xboxone_wc</accessory>
 
@@ -784,6 +848,8 @@
             <manufacturer>MSI</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
             <accessories>
                 <accessory>xboxone_wc</accessory>
 
@@ -872,6 +938,7 @@
         <manufacturer>TCL</manufacturer>
         <condition>New</condition>
         <discount>30.0</discount>
+
 <mrebate>No</mrebate>
 		<warranty>Yes</warranty>
                
@@ -892,6 +959,8 @@
         <manufacturer>Mint</manufacturer>
         <condition>New</condition>
         <discount>1.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>tv_remote</accessory>
             <accessory>tv_wallmount</accessory>
@@ -911,6 +980,8 @@
         <manufacturer>Mint</manufacturer>
         <condition>New</condition>
         <discount>1.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>xbox360_wc</accessory>
             <accessory>xbox360_sh</accessory>
@@ -928,6 +999,116 @@
         <manufacturer>Mint</manufacturer>
         <condition>New</condition>
         <discount>1.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </Wireless>
+<Wireless id="wireless9">
+        <name>Basic -Unlimted(talk,text and data)</name>
+        <price>31</price>
+        <image>xfinity.png</image>
+        <manufacturer>Xfinity</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+            <accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
+			
+			
+        </accessories>
+    </Wireless>
+    <Wireless id="wireless4">
+       <name>Premium -Basic Plan Audio+Video Streaming</name>
+        <price>51</price>
+        <image>xfinity.png</image>
+        <manufacturer>Xfinity</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </Wireless>
+
+    <Wireless id="wireless5">
+      <name>Ultimate -Basic Plan+Speed+Performace</name>
+        <price>99</price>
+        <image>xfinity.png</image>
+        <manufacturer>Xfinity</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>ps4_wc</accessory>
+			
+        </accessories>
+    </Wireless>
+<Wireless id="wireless6">
+        <name>Basic -Unlimted(talk,text and data)</name>
+        <price>31</price>
+        <image>att.jpg</image>
+        <manufacturer>ATT</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>tv_remote</accessory>
+            <accessory>tv_wallmount</accessory>
+			<accessory>xboxone_kg</accessory>
+            <accessory>lg_glasses</accessory>
+			<accessory>xboxone_rs</accessory>
+            <accessory>xboxone_mp</accessory>
+			<accessory>xboxone_mc</accessory>
+			
+			
+        </accessories>
+    </Wireless>
+    <Wireless id="wireless7">
+       <name>Premium -Basic Plan Audio+Video Streaming</name>
+        <price>51</price>
+        <image>att.jpg</image>
+        <manufacturer>ATT</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+<mrebate>No</mrebate>
+		<warranty>No</warranty>
+        <accessories>
+            <accessory>xbox360_wc</accessory>
+            <accessory>xbox360_sh</accessory>
+			<accessory>xbox360_vb</accessory>
+			<accessory>xbox360_rs</accessory>
+			<accessory>xbox360_mp</accessory>
+			<accessory>xbox360_kg</accessory>
+        </accessories>
+    </Wireless>
+
+    <Wireless id="wireless8">
+      <name>Ultimate -Basic Plan+Speed+Performace</name>
+        <price>99</price>
+        <image>att.jpg</image>
+        <manufacturer>ATT</manufacturer>
+        <condition>New</condition>
+        <discount>1.00</discount>
+<mrebate>No</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>ps4_wc</accessory>
 			
@@ -946,6 +1127,8 @@
         <manufacturer>Bose</manufacturer>
         <condition>New</condition>
         <discount>10.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>tv_remote</accessory>
             <accessory>tv_wallmount</accessory>
@@ -963,6 +1146,8 @@
         <manufacturer>Bose</manufacturer>
         <condition>New</condition>
         <discount>10.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>xbox360_wc</accessory>
             <accessory>xbox360_sh</accessory>
@@ -980,6 +1165,8 @@
         <manufacturer>Sony</manufacturer>
         <condition>New</condition>
         <discount>5.0</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>ps4_wc</accessory>
 			
@@ -992,6 +1179,8 @@
         <manufacturer>Sony</manufacturer>
         <condition>New</condition>
         <discount>10.0</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>ps3_wc</accessory>
 			
@@ -1004,6 +1193,8 @@
         <manufacturer>Yamaha</manufacturer>
         <condition>New</condition>
         <discount>30.0</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>nintendo_wc</accessory>
             <accessory>nintendo_sh</accessory>
@@ -1020,6 +1211,8 @@
         <manufacturer>Google</manufacturer>
         <condition>New</condition>
         <discount>35.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>tv_remote</accessory>
             <accessory>tv_wallmount</accessory>
@@ -1039,6 +1232,8 @@
         <manufacturer>Amazon</manufacturer>
         <condition>New</condition>
         <discount>21.00</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>xbox360_wc</accessory>
             <accessory>xbox360_sh</accessory>
@@ -1068,6 +1263,8 @@
         <manufacturer>Amazon</manufacturer>
         <condition>New</condition>
         <discount>29.0</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>ps3_wc</accessory>
 			
@@ -1080,6 +1277,8 @@
         <manufacturer>Google</manufacturer>
         <condition>New</condition>
         <discount>30.0</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
         <accessories>
             <accessory>nintendo_wc</accessory>
             <accessory>nintendo_sh</accessory>
@@ -1092,6 +1291,8 @@
             <manufacturer>Amazon</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
 
         </voiceAssistant>
 
@@ -1102,6 +1303,8 @@
             <manufacturer>Amazon</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
 
         </voiceAssistant>
 
@@ -1112,6 +1315,8 @@
             <manufacturer>Amazon</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
 
         </voiceAssistant>
 
@@ -1124,6 +1329,8 @@
             <manufacturer>iHome</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
 
         </voiceAssistant>
 
@@ -1134,6 +1341,8 @@
             <manufacturer>Google</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
 
         </voiceAssistant>
 
@@ -1146,6 +1355,8 @@
             <manufacturer>JBL</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
 
         </voiceAssistant>
 
@@ -1156,6 +1367,8 @@
             <manufacturer>iHome</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
 
         </voiceAssistant>
 
@@ -1166,6 +1379,8 @@
             <manufacturer>Google</manufacturer>
             <condition>New</condition>
             <discount>5</discount>
+<mrebate>Yes</mrebate>
+		<warranty>No</warranty>
 
         </voiceAssistant>
 

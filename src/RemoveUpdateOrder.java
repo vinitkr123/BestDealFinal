@@ -100,7 +100,7 @@ public class RemoveUpdateOrder extends HttpServlet {
              pw.print("<form action='Account' method='post'");
              pw.print("<table style='width:100%'>");
              pw.print("<h2 style='color:red'>Status: The order has been processed and will be delivered by "+request.getParameter("deliverydate")+"</h2>");
-             pw.print("<br><nr><td><a href='Account'><input type='button' value='GO BACK' class='btnbuy'/></a></td>");
+             pw.print("<br><nr><td><a href='Account'><input type='button' value='GO BACK' class='btn btn-primary'/></a></td>");
              pw.print("</table>");
              pw.print("</form></div></div></div>");
         }

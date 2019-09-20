@@ -41,36 +41,29 @@ public class WirelessList extends HttpServlet {
 			 }
 				name = "Mint";
 		   }
-		   else if(CategoryName.equals("Sony"))
+		   else if(CategoryName.equals("ATT"))
 		    {
 			for(Map.Entry<String,Wireless> entry : SaxParserDataStore.mapWireless.entrySet())
 				{
-				 if(entry.getValue().getRetailer().equals("Sony"))
+				 if(entry.getValue().getRetailer().equals("ATT"))
 				 {
 					 hm.put(entry.getValue().getId(),entry.getValue());
 				 }
 				}
-				 name = "Sony";
+				 name = "ATT";
 			}
-		   else if(CategoryName.equals("Beats"))
+		   else if(CategoryName.equals("Xfinity"))
 		    {
 			for(Map.Entry<String,Wireless> entry : SaxParserDataStore.mapWireless.entrySet())
 				{
-				 if(entry.getValue().getRetailer().equals("Beats"))
+				 if(entry.getValue().getRetailer().equals("Xfinity"))
 				 {
 					 hm.put(entry.getValue().getId(),entry.getValue());
 				 }
 				}
-				 name = "Beats";
+				 name = "Xfinity";
 			}
 		}
-
-		
-		/* Header, Left Navigation Bar are Printed.
-
-		All the Console and Console information are dispalyed in the Content Section
-
-		and then Footer is Printed*/
 
 		Utilities utility = new Utilities(request,pw);
 		utility.printHtml("Header.html");
