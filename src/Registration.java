@@ -106,16 +106,16 @@ public class Registration extends HttpServlet {
         if (error)
             pw.print("<h4 style='color:red'>" + error_msg + "</h4>");
         pw.print("<form method='post' action='Registration'>"
-                + "<table style='width:100%'><tr><td>"
-                + "<h3>Username</h3></td><td><input type='text' name='username' value='' class='input' required></input>"
+                + "<table style='width:100%' class='table'><tr><td>"
+                + "<h3>Username</h3></td><td><input type='text' name='username' value='' class='form-control input-md pull-left' required></input>"
                 + "</td></tr><tr><td>"
-                + "<h3>Password</h3></td><td><input type='password' name='password' value='' class='input' required></input>"
+                + "<h3>Password</h3></td><td><input type='password' name='password' value='' class='form-control' required></input>"
                 + "</td></tr><tr><td>"
-                + "<h3>Re-Password</h3></td><td><input type='password' name='repassword' value='' class='input' required></input>"
+                + "<h3>Re-Password</h3></td><td><input type='password' name='repassword' value='' class='form-control' required></input>"
                 + "</td></tr><tr><td>"
-                + "<h3>User Type</h3></td><td><select name='userType' class='input'><option value='Customer' selected>Customer</option><option value='StoreManager'>Store Manager</option><option value='Salesman'>Salesman</option></select>"
+                + "<h3>User Type</h3></td><td><select name='userType' class='form-control'><option value='Customer' selected>Customer</option><option value='StoreManager'>Store Manager</option><option value='Salesman'>Salesman</option></select>"
                 + "</td></tr></table>"
-                + "<input type='submit' class='btnbuy' name='ByUser' value='Create User' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>"
+                + "<input type='submit' class='btn btn-primary' name='ByUser' value='Create User' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>"
                 + "</form>" + "</div></div></div>");
         utility.printHtml("Footer.html");
     }
