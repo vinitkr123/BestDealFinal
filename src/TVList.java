@@ -76,7 +76,7 @@ public class TVList extends HttpServlet {
 		utility.printHtml("Header.html");
 		utility.printHtml("LeftNavigationBar.html");
 		pw.print("<div id='content'><div class='post'><h2 class='title meta'>");
-		pw.print("<a style='font-size: 24px;'>"+name+" Consoles</a>");
+		pw.print("<a style='font-size: 24px;'>"+name+"TV </a>");
 		pw.print("</h2><div class='entry'><table id='bestseller' style='width:100%'>");
 		int i = 1; int size= hm.size();
 		for(Map.Entry<String, TV> entry : hm.entrySet())

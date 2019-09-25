@@ -2,10 +2,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TimeZone;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -875,8 +878,10 @@ public class Utilities extends HttpServlet {
 	}
 
 	public void storeNewOrder(int orderId, String orderName, String customerName, double orderPrice, String userAddress,
-			String creditCardNo) {
+			String creditCardNo,String date) {
 		HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
+       
+		
 		String TOMCAT_HOME = System.getProperty("catalina.home");
 		// get the payment details file
 		try {
@@ -900,7 +905,7 @@ public class Utilities extends HttpServlet {
 		ArrayList<OrderPayment> listOrderPayment = orderPayments.get(orderId);
 
 		OrderPayment orderpayment = new OrderPayment(orderId, customerName, orderName, orderPrice, userAddress,
-				creditCardNo,null);
+				creditCardNo,date);
 		listOrderPayment.add(orderpayment);
 
 		// add order details into file

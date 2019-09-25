@@ -50,7 +50,7 @@ public class Payment extends HttpServlet {
             SimpleDateFormat df = new SimpleDateFormat("HHmmss");
         	int orderId=utility.getOrderPaymentSize()+1;
             for (OrderItem oi : utility.getCustomerOrders()) {
-                utility.storePayment(orderId, oi.getName(), oi.getPrice()-oi.getDiscount(), userAddress, creditCardNo, formatter.format(today).toString() );
+            	utility.storePayment(orderId, oi.getName(), oi.getPrice()-oi.getDiscount(), userAddress, creditCardNo, formatter.format(today).toString() );
             }
 
             //remove the order details from cart after processing
@@ -71,8 +71,8 @@ public class Payment extends HttpServlet {
             Date canceltoday = new Date(System.currentTimeMillis());
             cal = Calendar.getInstance();
             cal.setTime(canceltoday);
-            cal.add(Calendar.DATE, 5);
-            today = cal.getTime();
+            cal.add(Calendar.DATE, 9);
+            canceltoday = cal.getTime();
             
             
             

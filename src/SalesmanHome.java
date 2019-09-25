@@ -7,9 +7,11 @@ import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TimeZone;
 
 @WebServlet("/SalesmanHome")
 public class SalesmanHome extends HttpServlet {
@@ -92,9 +94,19 @@ public class SalesmanHome extends HttpServlet {
 					totalPrice = Double.parseDouble(request.getParameter("totalPrice"));
 				}
 				if (utility.isItemExist(itemCatalog, itemName)) {
+					 SimpleDateFormat formatter= new SimpleDateFormat("dd-MM-yyyy");
+				        TimeZone obj = TimeZone.getTimeZone("CST");
+				        formatter.setTimeZone(obj);
+				        Date today = new Date(System.currentTimeMillis());
+				        Calendar cal = Calendar.getInstance();
+				        cal.setTime(today);
+				        cal.add(Calendar.DATE, 14);
+				        today = cal.getTime();
+				        
 					SimpleDateFormat df = new SimpleDateFormat("HHmmss");
 					int orderId = Integer.parseInt(df.format(new Date()));
-					utility.storeNewOrder(orderId, itemName, customerName, totalPrice, customerAddress, creditCardNo);
+					String date=null;
+					utility.storeNewOrder(orderId, itemName, customerName, totalPrice, customerAddress, creditCardNo,formatter.format(today).toString());
 					error_msg = "The order created successfully.";
 					displaySalesmanHome(request, response, pw, "order");
 				} else {
