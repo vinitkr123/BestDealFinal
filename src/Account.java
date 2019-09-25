@@ -89,7 +89,7 @@ public class Account extends HttpServlet {
 							// pw.print("<td><input type='radio' name='orderName' value='" +
 							// oi.getOrderName() + "'></td>");
 							pw.print("<td>" + oi.getOrderId() + "</td><td>" + oi.getUserName() + "</td><td>"
-									+ oi.getOrderName() + "</td><td>" + oi.getDeliverydate() + "</td><td>Price: "
+									+ oi.getOrderName() + "</td><td>"+oi.getDeliverydate()+"</td><td>Price: "
 									+ oi.getOrderPrice() + "</td>");
 							pw.print("<input type='hidden' name='orderId' value='" + oi.getOrderId() + "'>");
 							pw.print("<td><input type='submit' name='Order' value='Cancel' class='btn btn-danger'></td>");

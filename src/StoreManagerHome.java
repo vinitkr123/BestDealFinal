@@ -102,10 +102,13 @@ public class StoreManagerHome extends HttpServlet {
 
 		pw.print("<h4>Product Catalog</h4><td><select name='productCatalog' class='form-control'>"
 				+ "<option value='FitnessWatch' selected>Fitness watch</option>"
-				+ "<option value='SmartWatch'>Smart watch</option>" + "<option value='Headphone'>Headphone</option>"
-				+ "<option value='VirtualReality'>Virtual reality</option>"
-				+ "<option value='Sound'>Sound System</option>" + "<option value='Phone'>Phone</option>"
-				+ "<option value='TV'>TV</option>" + "<option value='Laptop'>Laptop</option>"
+				+ "<option value='SmartWatch'>Smart watch</option>"
+				+ "<option value='Headphone'>Headphone</option>"
+				+ "<option value='Sound'>Sound System</option>" 
+				+ "<option value='Phone'>Phone</option>"
+				+ "<option value='TV'>TV</option>" 
+				+ "<option value='Laptop'>Laptop</option>"
+				+ "<option value='Wireless'>Wireless</option>"
 				+ "<option value='VoiceAssistant'>Voice assistant</option>"
 				+ "<option value='Accessory'>Accessory</option></select>");
 		pw.print("</td></tr></td><tr><td>");

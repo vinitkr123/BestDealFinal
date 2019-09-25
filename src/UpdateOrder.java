@@ -30,7 +30,7 @@ public class UpdateOrder extends HttpServlet {
         //Create a new order id
         SimpleDateFormat df = new SimpleDateFormat("HHmmss");
         int newOrderId = Integer.parseInt(df.format(new Date()));
-        utility.storeNewOrder(newOrderId, customerName, productName, price, address, creditCard);
+        utility.storeNewOrder(newOrderId, customerName, productName, price, address, creditCard,null);
         response.sendRedirect("SalesmanHome");
     }
 }
