@@ -98,16 +98,24 @@ public class TVList extends HttpServlet {
 					"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
 					"<input type='hidden' name='type' value='tv'>"+
 					"<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+					
 					"<input type='hidden' name='access' value=''>"+
 					"<input type='submit' class='btn btn-success' value='Buy Now'></form></li>");
-			pw.print("<li><form method='post' action='WriteReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
+			pw.print("<li><form method='post' action='WriteReview'>"+"<input type='hidden' name='name' value='"+tv.getName()+"'>"+
 					"<input type='hidden' name='type' value='tv'>"+
 					"<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+					"<input type='hidden' name='price' value='"+orignalprice+"'>"+
+					"<input type='hidden' name='rebate' value='"+tv.getMrebate()+"'>"+
+					"<input type='hidden' name='retailername' value='"+tv.getRetailer()+"'>"+
+					"<input type='hidden' name='discount' value='"+tv.getDiscount()+"'>"+
 					"<input type='hidden' name='access' value=''>"+
 				    "<input type='submit' value='WriteReview' class='btn btn-primary'></form></li>");
-			pw.print("<li><form method='post' action='ViewReview'>"+"<input type='hidden' name='name' value='"+entry.getKey()+"'>"+
-					"<input type='hidden' name='type' value='tv'>"+
+			pw.print("<li><form method='post' action='ViewReview'>"+"<input type='hidden' name='name' value='"+tv.getName()+"'>"+
 					"<input type='hidden' name='maker' value='"+CategoryName+"'>"+
+					"<input type='hidden' name='price' value='"+orignalprice+"'>"+
+					"<input type='hidden' name='rebate' value='"+tv.getMrebate()+"'>"+
+					"<input type='hidden' name='retailername' value='"+tv.getRetailer()+"'>"+
+					"<input type='hidden' name='discount' value='"+tv.getDiscount()+"'>"+
 					"<input type='hidden' name='access' value=''>"+
 				    "<input type='submit' value='ViewReview' class='btn btn-primary'></form></li>");
 			if(tv.getWarranty().equals("No")) {

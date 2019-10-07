@@ -8,18 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
+
+
 @WebServlet("/Login")
-
 public class Login extends HttpServlet {
+	
 
+	MySQLDataStoreUtilities dataStoreUtilities = new MySQLDataStoreUtilities();
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter pw = response.getWriter();
-
-		/* User Information(username,password,usertype) is obtained from HttpServletRequest,
-		Based on the Type of user(customer,retailer,manager) respective hashmap is called and the username and 
-		password are validated and added to session variable and display Login Function is called */
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -27,25 +27,31 @@ public class Login extends HttpServlet {
 
         HashMap<String, User> hm = new HashMap<String, User>();
         String TOMCAT_HOME = System.getProperty("catalina.home");
-        //user details are validated using a file
-        //if the file contains username and password user entered user will be directed to home page
-        //else error message will be shown
+      
         try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/vinit/UserDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+        	
+        	hm=MySQLDataStoreUtilities.selectloginUser(username, "Registration",userType);
+        	if(hm.containsKey(username))
+        	{
+        		System.out.println("User is a valid user");
+        	}
+        	//FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/vinit/UserDetails.txt"));
+            //ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             //System.out.println("User Info: " + objectInputStream.toString());
-            hm = (HashMap) objectInputStream.readObject();  //hmå­˜æ”¾ç”¨æˆ·ä¿¡æ�¯
-
+            //hm = (HashMap) objectInputStream.readObject(); 
+           // hm = MySQLDataStoreUtilities.selectUser(username, "Registration");
         } catch (Exception e) {
+        	e.printStackTrace();
 
         }
         User user = hm.get(username);
-        if (user != null) {  //å­˜åœ¨è¯¥ç”¨æˆ·å��ï¼Œè¿›è¡Œæ ¡éªŒ
+        if (user != null) { 
             String user_password = user.getPassword();
             if (password.equals(user_password)) {
                 HttpSession session = request.getSession(true);
                 session.setAttribute("username", username);
                 session.setAttribute("userType", userType);
+                
                 if (userType.equalsIgnoreCase("Customer")) {
                     response.sendRedirect("Home");
                     return;
@@ -59,7 +65,6 @@ public class Login extends HttpServlet {
                 }
             }
         }
-        //ç”¨æˆ·å��ä¸�å­˜åœ¨
         displayLogin(request, response, pw, true);
     }
 

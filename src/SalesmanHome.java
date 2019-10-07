@@ -19,7 +19,21 @@ public class SalesmanHome extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		PrintWriter pw = response.getWriter();
+		Utilities utility = new Utilities(request, pw);
+		try {
+			response.setContentType("text/html");
+			if (!utility.isLoggedin()) {
+				HttpSession session = request.getSession(true);
+				session.setAttribute("login_msg", "Please Login before doing this activity");
+				response.sendRedirect("Login");
+				return;
+			}
+		}
+			catch (Exception e) {
+				// TODO: handle exception
+			}
 		displaySalesmanHome(request, response, pw, "");
 	}
 
@@ -44,10 +58,11 @@ public class SalesmanHome extends HttpServlet {
 
 		// get the user details from file
 		try {
-			FileInputStream fileInputStream = new FileInputStream(
+		/*	FileInputStream fileInputStream = new FileInputStream(
 					new File(TOMCAT_HOME + "/webapps/vinit/UserDetails.txt"));
 			ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-			hm = (HashMap) objectInputStream.readObject();
+			hm = (HashMap) objectInputStream.readObject();*/
+			hm = MySQLDataStoreUtilities.selectloginUser(customerName, "Registration","Customer");
 		} catch (Exception e) {
 
 		}
@@ -65,13 +80,15 @@ public class SalesmanHome extends HttpServlet {
 				} else {
 					User user = new User(username, password, "Customer");
 					hm.put(username, user);
-					FileOutputStream fileOutputStream = new FileOutputStream(
+					/*FileOutputStream fileOutputStream = new FileOutputStream(
 							TOMCAT_HOME + "/webapps/vinit/UserDetails.txt");
 					ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
 					objectOutputStream.writeObject(hm);
 					objectOutputStream.flush();
 					objectOutputStream.close();
-					fileOutputStream.close();
+					fileOutputStream.close();*/
+					
+					MySQLDataStoreUtilities.insertUser(username, password, repassword, "Customer");
 					HttpSession session = request.getSession(true);
 					session.setAttribute("login_msg", "The customer account created successfully.");
 
@@ -202,6 +219,7 @@ public class SalesmanHome extends HttpServlet {
 					new File(TOMCAT_HOME + "/webapps/vinit/PaymentDetails.txt"));
 			ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 			orderPayments = (HashMap) objectInputStream.readObject();
+			orderPayments = MySQLDataStoreUtilities.selectCustomerOrder("sales", 0,"Sales");
 		} catch (Exception ignored) {
 
 		}

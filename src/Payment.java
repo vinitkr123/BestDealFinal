@@ -35,22 +35,25 @@ public class Payment extends HttpServlet {
         
         
         Utilities utility = new Utilities(request, pw);
+        HttpSession session = request.getSession(true);
         if (!utility.isLoggedin()) {
-            HttpSession session = request.getSession(true);
             session.setAttribute("login_msg", "Please Login to Pay");
             response.sendRedirect("Login");
             return;
         }
 
-        String userAddress = request.getParameter("userAddress");
-        String creditCardNo = request.getParameter("creditCardNo");
-        String cust_name = request.getParameter("cust_name");
+        String creditCardNo = request.getParameter("userAddress");
+        String userAddress = request.getParameter("creditCardNo");
+        String cust_name = session.getAttribute("username").toString();
         
         if (!userAddress.isEmpty() && !creditCardNo.isEmpty()) {
             SimpleDateFormat df = new SimpleDateFormat("HHmmss");
         	int orderId=utility.getOrderPaymentSize()+1;
+        	
             for (OrderItem oi : utility.getCustomerOrders()) {
             	utility.storePayment(orderId, oi.getName(), oi.getPrice()-oi.getDiscount(), userAddress, creditCardNo, formatter.format(today).toString() );
+            	Double discount = oi.getPrice()-oi.getDiscount();
+            	MySQLDataStoreUtilities.insertCustomerOrder(orderId,cust_name,oi.getName(), discount, userAddress, creditCardNo,formatter.format(today).toString() );
             }
 
             //remove the order details from cart after processing
@@ -76,10 +79,10 @@ public class Payment extends HttpServlet {
             
             
             
-           
+         
        
             pw.print("<br>Estimated delivery date: " + formatter.format(today));
-
+            
             pw.print("<br><div style='color:red'>You can cancel your order before: " + formatter.format(canceltoday));
             pw.print("</h2></div></div></div></div>");
             utility.printHtml("Footer.html");

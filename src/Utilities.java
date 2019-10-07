@@ -73,8 +73,8 @@ public class Utilities extends HttpServlet {
 				String userType = session.getAttribute("userType").toString();
 				switch (userType) {
 				case "Customer":
-					result = result +"<li><a href='ViewOrder'><span class='glyphicon'>ViewOrder</span></a></li>"+
-							"<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
+					result = result + "<li><a href='ViewOrder'><span class='glyphicon'>ViewOrder</span></a></li>"
+							+ "<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
 							+ "<li><a href='Account'><span class='glyphicon'>Account</span></a></li>"
 							+ "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
 					break;
@@ -383,7 +383,7 @@ public class Utilities extends HttpServlet {
 
 			SaxParserDataStore.laptopHashMap.remove(productId);
 			return true;
-			
+
 		case "Wireless":
 
 			SaxParserDataStore.mapWireless.remove(productId);
@@ -502,7 +502,7 @@ public class Utilities extends HttpServlet {
 			SaxParserDataStore.mapSound.remove(id);
 			SaxParserDataStore.mapSound.put(id, sound);
 			return true;
-			
+
 		case "Wireless":
 
 			Wireless wireless = new Wireless();
@@ -610,7 +610,7 @@ public class Utilities extends HttpServlet {
 		ArrayList<OrderPayment> listOrderPayment = orderPayments.get(orderId);
 
 		OrderPayment orderpayment = new OrderPayment(orderId, customerName, orderName, orderPrice, userAddress,
-				creditCardNo,null);
+				creditCardNo, null);
 		listOrderPayment.add(orderpayment);
 
 		// add order details into file
@@ -662,10 +662,13 @@ public class Utilities extends HttpServlet {
 		HashMap<String, User> hm = new HashMap<String, User>();
 		String TOMCAT_HOME = System.getProperty("catalina.home");
 		try {
-			FileInputStream fileInputStream = new FileInputStream(
-					new File(TOMCAT_HOME + "/webapps/vinit/UserDetails.txt"));
-			ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-			hm = (HashMap) objectInputStream.readObject();
+			/*
+			 * FileInputStream fileInputStream = new FileInputStream( new File(TOMCAT_HOME +
+			 * "/webapps/vinit/UserDetails.txt")); ObjectInputStream objectInputStream = new
+			 * ObjectInputStream(fileInputStream); hm = (HashMap)
+			 * objectInputStream.readObject();
+			 */
+			hm = MySQLDataStoreUtilities.selectUser(session.getAttribute("username").toString(), "Registration");
 		} catch (Exception ignored) {
 		}
 		return hm.get(username());
@@ -677,6 +680,43 @@ public class Utilities extends HttpServlet {
 		if (OrdersHashMap.orders.containsKey(username()))
 			order = OrdersHashMap.orders.get(username());
 		return order;
+	}
+
+	public String storeReview(String productname, String producttype, String productmaker, String reviewrating,
+			String reviewdate, String reviewtext, String reatilerpin, String price, String city, String retailername,
+			String retailerstate, String productonsale, String manufacturerrebate,  String userage,
+			String usergender, String useroccupation) {
+		String message = MongoDBDataStoreUtilities.insertReview(productname, username(), producttype, productmaker,
+				reviewrating, reviewdate, reviewtext, reatilerpin, price, city, retailername, retailerstate,
+				productonsale, manufacturerrebate, userage, usergender, useroccupation);
+		if (!message.equals("Successfull")) {
+			return "UnSuccessfull";
+		} else {
+			HashMap<String, ArrayList<Review>> reviews = new HashMap<String, ArrayList<Review>>();
+			try {
+				reviews = MongoDBDataStoreUtilities.selectReview();
+			} catch (Exception e) {
+
+			}
+			if (reviews == null) {
+				reviews = new HashMap<String, ArrayList<Review>>();
+			}
+			// if there exist product review already add it into same list for productname
+			// or create a new record with product name
+
+			if (!reviews.containsKey(productname)) {
+				ArrayList<Review> arr = new ArrayList<Review>();
+				reviews.put(productname, arr);
+			}
+			ArrayList<Review> listReview = reviews.get(productname);
+			Review review = new Review(productname, username(), producttype, productmaker, reviewrating, reviewdate,
+					reviewtext, reatilerpin, price, city,retailername,retailerstate,productonsale,manufacturerrebate,userage,usergender,useroccupation);
+			listReview.add(review);
+
+			// add Reviews into database
+
+			return "Successfull";
+		}
 	}
 
 	/* getOrdersPaymentSize Function gets the size of OrderPayment */
@@ -736,15 +776,15 @@ public class Utilities extends HttpServlet {
 			FitnessWatch fitnessWatch = null;
 			fitnessWatch = SaxParserDataStore.fitnessWatchHashMap.get(name);
 			OrderItem orderitem = new OrderItem(fitnessWatch.getName(), fitnessWatch.getPrice(),
-					fitnessWatch.getImage(), fitnessWatch.getRetailer(),fitnessWatch.getDiscount());
+					fitnessWatch.getImage(), fitnessWatch.getRetailer(), fitnessWatch.getDiscount());
 			orderItems.add(orderitem);
 		}
 
 		if (type.equals("Wireless")) {
-			Wireless wireless= null;
+			Wireless wireless = null;
 			wireless = SaxParserDataStore.mapWireless.get(name);
-			OrderItem orderitem = new OrderItem(wireless.getName(), wireless.getPrice(),
-					wireless.getImage(), wireless.getRetailer(),wireless.getDiscount());
+			OrderItem orderitem = new OrderItem(wireless.getName(), wireless.getPrice(), wireless.getImage(),
+					wireless.getRetailer(), wireless.getDiscount());
 			orderItems.add(orderitem);
 		}
 
@@ -752,7 +792,7 @@ public class Utilities extends HttpServlet {
 			SmartWatch smartWatch = null;
 			smartWatch = SaxParserDataStore.smartWatchHashMap.get(name);
 			OrderItem orderitem = new OrderItem(smartWatch.getName(), smartWatch.getPrice(), smartWatch.getImage(),
-					smartWatch.getRetailer(),smartWatch.getDiscount());
+					smartWatch.getRetailer(), smartWatch.getDiscount());
 			orderItems.add(orderitem);
 		}
 
@@ -760,21 +800,22 @@ public class Utilities extends HttpServlet {
 			Headphone headphone = null;
 			headphone = SaxParserDataStore.headphoneHashMap.get(name);
 			OrderItem orderitem = new OrderItem(headphone.getName(), headphone.getPrice(), headphone.getImage(),
-					headphone.getRetailer(),headphone.getDiscount());
+					headphone.getRetailer(), headphone.getDiscount());
 			orderItems.add(orderitem);
 		}
 
 		if (type.equals("tv")) {
 			TV tv = null;
 			tv = SaxParserDataStore.tvHashMap.get(name);
-			OrderItem orderitem = new OrderItem(tv.getName(), tv.getPrice(), tv.getImage(), tv.getRetailer(),tv.getDiscount());
+			OrderItem orderitem = new OrderItem(tv.getName(), tv.getPrice(), tv.getImage(), tv.getRetailer(),
+					tv.getDiscount());
 			orderItems.add(orderitem);
 		}
 		if (type.equals("SoundSystem")) {
 			Sound sound = null;
 			sound = SaxParserDataStore.mapSound.get(name);
 			OrderItem orderitem = new OrderItem(sound.getName(), sound.getPrice(), sound.getImage(),
-					sound.getRetailer(),sound.getDiscount());
+					sound.getRetailer(), sound.getDiscount());
 			orderItems.add(orderitem);
 		}
 
@@ -783,20 +824,21 @@ public class Utilities extends HttpServlet {
 			phone = SaxParserDataStore.mapPhoneList.get(name);
 			// OrderItem orderitem = new OrderItem(phone.getName(), phone.getPrice(),
 			// phone.getImage(), phone.getRetailer());
-			OrderItem orderitem = new OrderItem(phone.getId(), phone.getPrice(), phone.getImage(), phone.getRetailer(),phone.getDiscount());
+			OrderItem orderitem = new OrderItem(phone.getId(), phone.getPrice(), phone.getImage(), phone.getRetailer(),
+					phone.getDiscount());
 			orderItems.add(orderitem);
 		}
 		if (type.equals("laptop")) {
 			Laptop laptop = null;
 			laptop = SaxParserDataStore.laptopHashMap.get(name);
 			OrderItem orderitem = new OrderItem(laptop.getName(), laptop.getPrice(), laptop.getImage(),
-					laptop.getRetailer(),laptop.getDiscount());
+					laptop.getRetailer(), laptop.getDiscount());
 			orderItems.add(orderitem);
 		}
 		if (type.equals("voiceAssistant")) {
 			VoiceAssistant voiceAssistant = SaxParserDataStore.voiceAssistantHashMap.get(name);
 			OrderItem orderitem = new OrderItem(voiceAssistant.getName(), voiceAssistant.getPrice(),
-					voiceAssistant.getImage(), voiceAssistant.getRetailer(),voiceAssistant.getDiscount());
+					voiceAssistant.getImage(), voiceAssistant.getRetailer(), voiceAssistant.getDiscount());
 			orderItems.add(orderitem);
 		}
 
@@ -804,14 +846,14 @@ public class Utilities extends HttpServlet {
 			Accessory accessory = null;
 			accessory = SaxParserDataStore.accessories.get(name);
 			OrderItem orderitem = new OrderItem(accessory.getName(), accessory.getPrice(), accessory.getImage(),
-					accessory.getRetailer(),accessory.getDiscount());
+					accessory.getRetailer(), accessory.getDiscount());
 			orderItems.add(orderitem);
 		}
 	}
 
 	// store the payment details for orders
-	public void storePayment(int orderId, String orderName, double orderPrice, String userAddress,
-			String creditCardNo, String date) {
+	public void storePayment(int orderId, String orderName, double orderPrice, String userAddress, String creditCardNo,
+			String date) {
 		HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
 		String TOMCAT_HOME = System.getProperty("catalina.home");
 		// get the payment details file
@@ -836,7 +878,7 @@ public class Utilities extends HttpServlet {
 		ArrayList<OrderPayment> listOrderPayment = orderPayments.get(orderId);
 
 		OrderPayment orderpayment = new OrderPayment(orderId, username(), orderName, orderPrice, userAddress,
-				creditCardNo,date);
+				creditCardNo, date);
 		listOrderPayment.add(orderpayment);
 
 		// add order details into file
@@ -878,10 +920,9 @@ public class Utilities extends HttpServlet {
 	}
 
 	public void storeNewOrder(int orderId, String orderName, String customerName, double orderPrice, String userAddress,
-			String creditCardNo,String date) {
+			String creditCardNo, String date) {
 		HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-       
-		
+
 		String TOMCAT_HOME = System.getProperty("catalina.home");
 		// get the payment details file
 		try {
@@ -889,6 +930,8 @@ public class Utilities extends HttpServlet {
 					new File(TOMCAT_HOME + "/webapps/vinit/PaymentDetails.txt"));
 			ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 			orderPayments = (HashMap) objectInputStream.readObject();
+			MySQLDataStoreUtilities.insertCustomerOrder(orderId,customerName,orderName, orderPrice, userAddress, creditCardNo,(date).toString() );
+	           
 		} catch (Exception ignored) {
 
 		}
@@ -905,7 +948,7 @@ public class Utilities extends HttpServlet {
 		ArrayList<OrderPayment> listOrderPayment = orderPayments.get(orderId);
 
 		OrderPayment orderpayment = new OrderPayment(orderId, customerName, orderName, orderPrice, userAddress,
-				creditCardNo,date);
+				creditCardNo, date);
 		listOrderPayment.add(orderpayment);
 
 		// add order details into file
@@ -922,7 +965,7 @@ public class Utilities extends HttpServlet {
 		hm.putAll(SaxParserDataStore.smartWatchHashMap);
 		return hm;
 	}
-	
+
 	public HashMap<String, Wireless> getWireless() {
 		HashMap<String, Wireless> hm = new HashMap<String, Wireless>();
 		hm.putAll(SaxParserDataStore.mapWireless);
@@ -935,7 +978,6 @@ public class Utilities extends HttpServlet {
 		return hm;
 	}
 
-	
 	public HashMap<String, TV> getTV() {
 		HashMap<String, TV> hm = new HashMap<String, TV>();
 		hm.putAll(SaxParserDataStore.tvHashMap);

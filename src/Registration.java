@@ -46,11 +46,13 @@ public class Registration extends HttpServlet {
             //get the user details from file
 
             try {
-                FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/vinit/UserDetails.txt"));
-                ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-                hm = (HashMap) objectInputStream.readObject();
+                //FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/vinit/UserDetails.txt"));
+                //ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+                hm = MySQLDataStoreUtilities.selectUser(username,"Registration");
+            	//hm = (HashMap) objectInputStream.readObject();
+                
             } catch (Exception e) {
-
+            	e.printStackTrace();
             }
 
             // if the user already exist show error that already exist
@@ -63,13 +65,18 @@ public class Registration extends HttpServlet {
 
                 User user = new User(username, password, usertype);
                 hm.put(username, user);
-                FileOutputStream fileOutputStream = new FileOutputStream(TOMCAT_HOME + "/webapps/vinit/UserDetails.txt");
-                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-                objectOutputStream.writeObject(hm);
-                objectOutputStream.flush();
-                objectOutputStream.close();
-                fileOutputStream.close();
+                //FileOutputStream fileOutputStream = new FileOutputStream(TOMCAT_HOME + "/webapps/vinit/UserDetails.txt");
+                //ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                //objectOutputStream.writeObject(hm);
+                //objectOutputStream.flush();
+                //objectOutputStream.close();
+                //fileOutputStream.close();
+                MySQLDataStoreUtilities.insertUser(username, password, repassword, usertype);
+                
                 HttpSession session = request.getSession(true);
+                
+                
+                
                 session.setAttribute("login_msg", "Your " + usertype + " account has been created. Please login");
                 if (!utility.isLoggedin()) {
                     response.sendRedirect("Login");

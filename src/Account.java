@@ -59,10 +59,10 @@ public class Account extends HttpServlet {
 			HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
 			String TOMCAT_HOME = System.getProperty("catalina.home");
 			try {
-				FileInputStream fileInputStream = new FileInputStream(
-						new File(TOMCAT_HOME + "/webapps/vinit/PaymentDetails.txt"));
-				ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-				orderPayments = (HashMap) objectInputStream.readObject();
+				//FileInputStream fileInputStream = new FileInputStream(
+					//	new File(TOMCAT_HOME + "/webapps/vinit/PaymentDetails.txt"));
+				//ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+				orderPayments = MySQLDataStoreUtilities.selectCustomerOrder(session.getAttribute("username").toString(), 0,"SelectOrder");
 			} catch (Exception e) {
 
 			}
@@ -86,8 +86,6 @@ public class Account extends HttpServlet {
 						if (oi.getUserName().equals(user.getName())) {
 							pw.print("<form method='post' action='RemoveUpdateOrder'>");
 							pw.print("<tr>");
-							// pw.print("<td><input type='radio' name='orderName' value='" +
-							// oi.getOrderName() + "'></td>");
 							pw.print("<td>" + oi.getOrderId() + "</td><td>" + oi.getUserName() + "</td><td>"
 									+ oi.getOrderName() + "</td><td>"+oi.getDeliverydate()+"</td><td>Price: "
 									+ oi.getOrderPrice() + "</td>");
@@ -98,6 +96,10 @@ public class Account extends HttpServlet {
 							pw.print("<input type='hidden' name='productName' value='" + oi.getOrderName() + "'>");
 							pw.print("<input type='hidden' name='username' value='" + oi.getUserName() + "'>");
 							pw.print("<input type='hidden' name='deliverydate' value='" + oi.getDeliverydate() + "'>");
+							
+							pw.print("<input type='hidden' name='creditCard' value='" + oi.getCreditCardNo() + "'>");
+							pw.print("<input type='hidden' name='address' value='" + oi.getUserAddress() + "'>");
+							
 							pw.print("<input type='hidden' name='userType' value='customer'>");
 							pw.print("</tr>");
 							pw.print("</form>");

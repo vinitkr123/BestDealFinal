@@ -8,7 +8,6 @@ import java.io.*;
 import java.util.HashMap;
 
 
-//salesmanæ‰‹åŠ¨ä¸ºcustomeråˆ›å»ºorder
 @WebServlet("/CreateOrder")
 public class CreateOrder extends HttpServlet {
     private String error_msg;
