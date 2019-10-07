@@ -13,7 +13,7 @@ public class RemoveUpdateOrder extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter pw = response.getWriter();
-
+        HttpSession session = request.getSession(true);
         Utilities utility = new Utilities(request, pw);
 
         int orderId = Integer.parseInt(request.getParameter("orderId"));
@@ -23,11 +23,14 @@ public class RemoveUpdateOrder extends HttpServlet {
         String address = request.getParameter("address");
         String creditCard = request.getParameter("creditCard");
         String userType = request.getParameter("userType");
+        
+       // String address = request.getParameter("userType");
 
 
         if (request.getParameter("Order") != null && request.getParameter("Order").equals("Cancel")) {
             //Cancel Order
-            utility.removeOldOrder(orderId, productName, username);
+        	MySQLDataStoreUtilities.deleteOrder(orderId, productName,username);
+        	//response.sendRedirect("Account");
 
             if (userType.equals("customer")) {
                 response.sendRedirect("Account");
@@ -37,7 +40,7 @@ public class RemoveUpdateOrder extends HttpServlet {
             }
         } else if (request.getParameter("Order") != null && request.getParameter("Order").equals("Update")) {
             //Update Order
-
+        	MySQLDataStoreUtilities.updateOrder(orderId, productName,username,creditCard,address);
             utility.printHtml("Header.html");
             utility.printHtml("LeftNavigationBar.html");
 
@@ -83,7 +86,7 @@ public class RemoveUpdateOrder extends HttpServlet {
             pw.print("<input type='submit' class='btnbuy' value='Update' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
             pw.print("</td></tr><tr><td></td><td>");
             pw.print("</td></tr></table>");
-            pw.print("</form></div></div></div>");
+            pw.print("</form></div></div></div>"); 
         }
         else if(request.getParameter("Status") != null && request.getParameter("Status").equals("Status"))
         {
